@@ -1,0 +1,16 @@
+
+/* Styles.css signifies general purpose stylizations */
+
+:root {
+
+    /* Homepage */
+    --fs-xl-name: clamp(1.4rem, 4vw, 4rem);
+    --fs-600-typography: clamp(1.3rem, 3.5vw, 4rem);
+    --fs-400-button: clamp(0.7rem, 3.5vw, 1rem);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+}
