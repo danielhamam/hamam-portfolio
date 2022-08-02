@@ -30,6 +30,11 @@
     padding-bottom: 3%;
 }
 
+#intro-button:hover {
+    background-color: lightblue;
+    transition: 0.5s;
+}
+
 .custom-br-name {
     display: block;
     margin-bottom: -.5em;

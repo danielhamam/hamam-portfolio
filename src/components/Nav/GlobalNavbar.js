@@ -15,16 +15,16 @@ export default function GlobalNavbar() {
               <a className="nav-link active" aria-current="page" href="#">HOME &nbsp; &nbsp;</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">ABOUT &nbsp; &nbsp;</a>
+              <a className="nav-link" href="about">ABOUT &nbsp; &nbsp;</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">SKILLS &nbsp; &nbsp;</a>
+              <a className="nav-link" href="skills">SKILLS &nbsp; &nbsp;</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">PORTFOLIO &nbsp; &nbsp;</a>
+              <a className="nav-link" href="portfolio">PORTFOLIO &nbsp; &nbsp;</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">PHOTOS &nbsp; &nbsp;</a>
+              <a className="nav-link" href="photos">PHOTOS &nbsp; &nbsp;</a>
             </li>
           </ul>
         </div>
