@@ -4,9 +4,9 @@
 :root {
 
     /* Homepage */
-    --fs-xl-name: clamp(1.4rem, 4vw, 4rem);
-    --fs-600-typography: clamp(1.3rem, 3.5vw, 4rem);
-    --fs-400-button: clamp(0.7rem, 3.5vw, 1rem);
+    --fs-xl-name: 5vw;
+    --fs-600-typography: 4.2vw;
+    --fs-400-button: 1.5vw;
 }
 
 body {
