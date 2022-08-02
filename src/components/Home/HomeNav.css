@@ -2,5 +2,23 @@
 /* HomeNav CSS */
 
 #home-nav-wrapper {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    /* border-top: 1px solid rgba(0, 0, 0, 0.05); */
+}
+
+.home-nav-font {
+    font-family: 'Bitter';
+    font-style: normal;
+    /* font-weight: 100; */
+    font-size: 1.7vw;
+    letter-spacing: 1.3px;
+}
+
+.home-nav-link {
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    text-decoration-line: underline;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }

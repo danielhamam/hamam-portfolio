@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <GlobalNavbar />
       <Introduction />
+      <br/> <br/> <br/>
       <HomeNav/>
     </>
   )
