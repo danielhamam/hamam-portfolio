@@ -1,5 +1,5 @@
 import React from 'react'
-import hamam from '../../assets/homepage/tempImage.gif'
+import ReactTypingEffect from 'react-typing-effect';
 
 export default function Introduction() {
   return (
@@ -13,7 +13,13 @@ export default function Introduction() {
                     </span>
                     <span className='custom-br-position'></span>
                     <div id="intro-position"> 
-                        software engineer 
+                        <ReactTypingEffect
+                            text={["software engineer", "web designer", "coffee addict"]}
+                            speed={200}
+                            typingDelay={1000}
+                            eraseDelay={1000}
+                            eraseSpeed={100}
+                        />
                         <br/>
                         &nbsp;&nbsp;
                         <button id='intro-button'> CONTACT ME </button>
