@@ -1,0 +1,20 @@
+
+/* Footer CSS Class */
+
+#footer-wrapper {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-text-content {
+    margin-left: 7%;
+    letter-spacing: 1.3px;
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.footer-social-links {
+    float: right;
+    margin-right: 7%;
+}
