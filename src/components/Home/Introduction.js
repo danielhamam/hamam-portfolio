@@ -21,7 +21,7 @@ export default function Introduction() {
                 </div>
             </div>
             <div className='col-4'>
-                <img id="intro-image" src={hamam}></img>
+                <iframe id="intro-image" src="https://giphy.com/embed/ndIq5ohg1pyfqyVOII" frameBorder="0" class="giphy-embed"></iframe>
             </div>
         </div>
     </div>

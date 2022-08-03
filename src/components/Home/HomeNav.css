@@ -6,7 +6,8 @@
 }
 
 #home-nav {
-    margin-top: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -25,4 +26,15 @@
     text-decoration-line: underline;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+.home-nav-image {
+    height: 8rem;
+    width: 4.5rem;
+    margin-bottom: .5rem;
+}
+
+.home-nav-row-margin {
+    display: block;
+    margin-bottom: 4rem;
 }

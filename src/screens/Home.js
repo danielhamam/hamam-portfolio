@@ -11,7 +11,6 @@ export default function Home() {
       <Introduction />
       <br/> <br/> <br/>
       <HomeNav/>
-      <br/> <br/> <br/> <br/> <br/>
       <Footer/>
     </>
   )
