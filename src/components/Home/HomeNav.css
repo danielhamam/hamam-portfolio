@@ -2,22 +2,26 @@
 /* HomeNav CSS */
 
 #home-nav-wrapper {
-    /* border-top: 1px solid rgba(0, 0, 0, 0.05); */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
+
+#home-nav {
+    margin-top: 4rem;
+}
+
 
 .home-nav-font {
     font-family: 'Bitter';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 1.7vw;
-    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: .05rem;
 }
 
 .home-nav-link {
     font-family: 'Bitter';
     font-style: normal;
-    font-weight: 300;
-    letter-spacing: 1.3px;
+    font-weight: 100;
+    letter-spacing: .1rem;
     text-decoration-line: underline;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;

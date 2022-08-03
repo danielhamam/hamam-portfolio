@@ -3,9 +3,9 @@ import hamam from '../../assets/homepage/tempImage.gif'
 
 export default function Introduction() {
   return (
-    <div id="intro-container" className="container d-flex justify-content-center align-items-center">
+    <div id="intro-container" className="container ps-5 pe-5 d-flex justify-content-center align-items-center">
         <div className="row">
-            <div className='col-6 col-sm-7 col-md-8'>
+            <div className='col-8 container d-flex justify-content-center align-items-center'>
                 <div className='mt-5 float-end'> 
                     <span id='intro-name'> 
                         Hi, <span className='custom-br-name'></span>
@@ -20,7 +20,7 @@ export default function Introduction() {
                     </div>
                 </div>
             </div>
-            <div className='col-6 col-sm-5 col-md-4 float-start'>
+            <div className='col-4'>
                 <img id="intro-image" src={hamam}></img>
             </div>
         </div>

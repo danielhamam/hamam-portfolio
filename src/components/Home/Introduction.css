@@ -2,32 +2,38 @@
 /* Introduction CSS */
 
 #intro-container {
-    height: 90vh;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* height: 80rem; */
+    /* height: 100%; */
+    margin-top: 7rem;
+    margin-bottom: 7rem;
 }
 
 #intro-name {
     font-weight: 800;
-    font-size: var(--fs-xl-name); 
+    /* font-size: var(--fs-xl-name);  */
+    font-size: 5rem;
 }
 
 #intro-position {
     font-family: 'Spectral', serif;
     font-weight: 200;
-    font-size: var(--fs-600-typography); 
+    /* font-size: var(--fs-600-typography);  */
+    font-size: 4.2rem;
 }
 
 #intro-button {
     display: inline-block;
     font-family: 'Sudo Var';
-    font-size: var(--fs-400-button);
+    /* font-size: var(--fs-400-button); */
+    font-size: 2rem;
     background: #FFFFFF;
     border: 1px solid #000000;
-    border-radius: 4px;
-    letter-spacing: 3px; 
-    width: 26vw;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    border-radius: .8rem;
+    letter-spacing: .5rem; 
+    width: 26rem;
+    /* padding-top: 3%;
+    padding-bottom: 3%; */
+    padding: 1rem;
 }
 
 #intro-button:hover {
@@ -46,9 +52,8 @@
 }
 
 #intro-image {
-    height: auto;
-    width: 100%;
-    margin-right: 50%;
+    height: 35rem;
+    width: 20rem;
 }
 
 /* Media Queries */

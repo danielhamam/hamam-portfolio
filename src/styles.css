@@ -7,6 +7,50 @@
     --fs-xl-name: 5vw;
     --fs-600-typography: 4.2vw;
     --fs-400-button: 1.5vw;
+
+    font-size: 11pt;
+
+}
+
+@media(max-width: 991px) {
+    :root {
+        font-size: 9pt;
+    }
+}
+
+@media(max-width: 767px) {
+    :root {
+        font-size: 7pt;
+    }
+}
+
+@media(max-width: 535px) {
+    :root {
+        font-size: 6.3pt;
+    }
+}
+
+@media(max-width: 494px) {
+    :root {
+        font-size: 5.5pt;
+    }
+}
+
+@media(max-width: 422px) {
+    :root {
+        font-size: 4.5pt;
+    }
+}
+
+@media(max-width: 351px) {
+    :root {
+        font-size: 4pt;
+    }
+}
+
+html {
+    height: 100%;
+    width: 100%;
 }
 
 body {
