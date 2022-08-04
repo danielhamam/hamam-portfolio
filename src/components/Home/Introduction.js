@@ -16,9 +16,9 @@ export default function Introduction() {
                         <ReactTypingEffect
                             text={["software engineer", "web designer", "coffee addict"]}
                             speed={200}
-                            typingDelay={1000}
+                            typingDelay={300}
                             eraseDelay={1000}
-                            eraseSpeed={100}
+                            eraseSpeed={80}
                         />
                         <br/>
                         &nbsp;&nbsp;

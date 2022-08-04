@@ -1,0 +1,42 @@
+
+/* About Me Styling */
+
+#about-portrait {
+    height: 25rem;
+    width: 38rem;
+}
+
+.about-spacing {
+    margin-top: 3rem
+}
+
+#about-header {
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+#about-text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #000000;
+    opacity: 0.5;
+    line-height: 2rem;
+}
+
+.about-text-container {
+    width: 70rem; 
+}
+
+#about-resume-icon {
+    margin-top: -2rem;
+    height: 9rem;
+    width: 9rem;
+}
+
+@media(max-width: 900px) {
+    .about-text-container {
+        width: 50rem; 
+    }
+}

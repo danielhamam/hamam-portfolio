@@ -12,7 +12,7 @@ export default function GlobalNavbar() {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">HOME &nbsp; &nbsp;</a>
+              <a className="nav-link active" aria-current="page" href="/">HOME &nbsp; &nbsp;</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="about">ABOUT &nbsp; &nbsp;</a>
