@@ -1,10 +1,10 @@
 import React from 'react'
-import GlobalNavbar from '../components/Nav/GlobalNavbar'
+import { GlobalNavbar } from '../components/Nav/GlobalNavbar'
 
-export default function Skills() {
+export const Skills = (props) => {
   return (
     <>
-      <GlobalNavbar/>
+      <GlobalNavbar active={props.active}/>
     </>
   )
 }
