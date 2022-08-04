@@ -1,0 +1,101 @@
+
+/* Introduction CSS */
+
+#skills-container {
+    /* height: 80rem; */
+    /* height: 100%; */
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+#skills-desc {
+    font-weight: 800;
+    /* font-size: var(--fs-xl-name);  */
+    font-size: 3.6rem;
+}
+
+#skills-button {
+    display: inline-block;
+    font-family: 'Sudo Var';
+    /* font-size: var(--fs-400-button); */
+    font-size: 2rem;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: .8rem;
+    letter-spacing: .5rem; 
+    width: 26rem;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+#skills-button:hover {
+    background-color: lightblue;
+    transition: 0.5s;
+}
+
+.custom-br-name {
+    display: block;
+    margin-bottom: -.5em;
+}
+
+.custom-br-position {
+    display: block;
+    margin-bottom: -.4em;
+}
+
+#skills-image {
+    height: 35rem;
+    width: 20rem;
+}
+
+.tagcloud {
+    font-family: 'Poppins', sans-serif;  
+    /* font-size: 1rem; */
+    font-weight: 650;
+    width: 30rem !important;
+    height: 30rem !important;
+    /* height: 5rem !important; */
+  }
+
+  .tagcloud--item:hover {
+    color: #36454F;
+}
+
+/* Media Queries */
+
+@media(max-width: 1400px) {
+    .tagcloud {
+        width: 27rem !important;
+        height: 27rem !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .tagcloud {
+        font-size: 7pt;
+    }
+}
+
+@media(max-width: 535px) {
+    .tagcloud {
+        font-size: 6.3pt;
+    }
+}
+
+@media(max-width: 494px) {
+    .tagcloud {
+        font-size: 5.5pt;
+    }
+}
+
+@media(max-width: 422px) {
+    .tagcloud {
+        font-size: 4.5pt;
+    }
+}
+
+@media(max-width: 351px) {
+    .tagcloud {
+        font-size: 4pt;
+    }
+}
