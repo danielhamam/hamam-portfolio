@@ -14,7 +14,7 @@ export default function Introduction() {
                     <span className='custom-br-position'></span>
                     <div id="intro-position"> 
                         <ReactTypingEffect
-                            text={["software engineer", "web designer", "coffee addict"]}
+                            text={["software engineer", "web designer", "creator/innovator"]}
                             speed={200}
                             typingDelay={300}
                             eraseDelay={1000}

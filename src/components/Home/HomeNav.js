@@ -17,7 +17,7 @@ export default function HomeNav() {
                         <span className='home-nav-font'> Learn a little bit about me and the start of my career as a software engineer </span>
                         <br/>
                         <br/>
-                        <a className='home-nav-link'> About Me </a>
+                        <a className='home-nav-link' href="/about"> About Me </a>
                     </div>
                 </div>
                 <div className='col-4'>
@@ -26,7 +26,7 @@ export default function HomeNav() {
                     <span className='home-nav-font'> View a list of my skills and abilities to see if I have what you’re looking for </span>
                     <br/>
                     <br/>
-                    <a className='home-nav-link'> My Skills </a>
+                    <a className='home-nav-link' href="/skills"> My Skills </a>
                 </div>
             </div>
             <span className='home-nav-row-margin'> </span>
@@ -37,7 +37,7 @@ export default function HomeNav() {
                     <span className='home-nav-font'> Jog through a list of personal projects that I dedicate my time building </span>
                     <br/>
                     <br/>
-                    <a className='home-nav-link'> My Work </a>
+                    <a className='home-nav-link' href='/portfolio'> My Work </a>
                 </div>
                 <div className='col-4'>
                     <img className='home-nav-image' src={photos}/>
@@ -45,7 +45,7 @@ export default function HomeNav() {
                     <span className='home-nav-font'> Take a stroll through an album of pictures I took sometime during my life </span>
                     <br/>
                     <br/>
-                    <a className='home-nav-link'> Photo Album </a>
+                    <a className='home-nav-link' href='/photos'> Photo Album </a>
                 </div>
             </div>
         </div>
