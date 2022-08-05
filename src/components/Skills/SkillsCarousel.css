@@ -1,0 +1,36 @@
+
+/* *********************************** */
+  /* Styles for the Skills Carousels  */
+/* *********************************** */
+
+.owl-carousel {
+    padding-top: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: auto;
+    /* padding-bottom: 4rem; */
+}
+
+.skills-heading {
+    font-weight: 800;
+    margin-bottom: 4rem;
+}
+
+.custom-br-title {
+    display: block;
+    margin-bottom: .2rem;
+}
+
+.item {}
+
+.item-text {
+    font-family: 'BIZ UDMincho';
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.item > img {
+    width: 100px !important;
+    height: 100px;
+    margin: auto;
+}
