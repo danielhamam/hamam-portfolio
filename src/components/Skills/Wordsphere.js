@@ -1,4 +1,8 @@
 export function createWordSphere() {
+  let width = 250;
+  function handleResize() { width = window.innerWidth; }
+  window.addEventListener("resize", handleResize)
+
   const TagCloud = require('TagCloud');
 
   const myTags = [
@@ -10,7 +14,7 @@ export function createWordSphere() {
   ];
 
   TagCloud('.wordsphere', myTags, {
-    radius: 250,
+    radius: width - (width * .3),
     maxSpeed: 'fast',
     initSpeed: 'fast',
     direction: 135,
