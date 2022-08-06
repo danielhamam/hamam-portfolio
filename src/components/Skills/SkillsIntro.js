@@ -11,7 +11,7 @@ export default function SkillsIntro() {
         tagCloudLoaded.current = true;
     });
   return (
-    <div id="skills-container" className="container-fluid d-flex justify-content-center align-items-center">
+    <div id="skills-wrapper" className="container-fluid d-flex justify-content-center align-items-center">
         <div className="row w-100">
             <div className='col-7 d-flex justify-content-end align-items-center'>
                 <div className='mt-5 text-center'> 

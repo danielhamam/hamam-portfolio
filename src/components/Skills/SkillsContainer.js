@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './SkillsContainer.css';
 
 // Frontend
 import htmlcss from '../../assets/skills/htmlcss.png';
@@ -49,7 +50,7 @@ export default function SkillsContainer() {
 
 
   return (
-    <div>
+    <div id="skills-container">
         {/* Frontend Skills */}
         <SkillsCarousel title = 'Frontend' skills = {frontendSkills}/>
 
