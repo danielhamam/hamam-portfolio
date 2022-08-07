@@ -27,25 +27,25 @@ import { SkillsCarousel } from './SkillsCarousel';
 
 export default function SkillsContainer() {
     const [frontendSkills, setFrontendSkills] = useState({
-      'ReactJS' : [react, 100],
-      'HTML / CSS' : [htmlcss, 100],
-      'JavaScript' : [javascript, 100],
-      'AngularJS' : [angular, 100],
-      'Figma' : [figma, 100]
+      'ReactJS' : [react, 90],
+      'HTML / CSS' : [htmlcss, 90],
+      'JavaScript' : [javascript, 90],
+      'AngularJS' : [angular, 80],
+      'Figma' : [figma, 85]
     })
     const [backendSkills, setbackendSkills] = useState({
-      'Python' : [python, 100],
-      'Java' : [java, 100],
-      'SQL' : [sql, 100],
-      'Spring Boot' : [springboot, 100],
-      'Bash' : [bash, 100]
+      'Python' : [python, 90],
+      'Java' : [java, 90],
+      'SQL' : [sql, 90],
+      'Spring Boot' : [springboot, 90],
+      'Bash' : [bash, 85]
     })
     const [otherSkills, setOtherSkills] = useState({
-      'Git' : [git, 100],
+      'Git' : [git, 90],
       'Agile' : [agile, 100],
-      'Salesforce' : [salesforce, 100],
-      'DNS' : [dns, 100],
-      'Final Cut Pro' : [fcp, 100]
+      'Salesforce' : [salesforce, 85],
+      'DNS' : [dns, 85],
+      'Final Cut Pro' : [fcp, 80]
     })
 
 
