@@ -1,45 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ProjectContainer.css';
 
 // Project Component
 import { Project } from './Project';
 
 // Projects
-import proj1 from '../../assets/projects/proj1.png';
-import proj2 from '../../assets/projects/proj2.png';
-import proj3 from '../../assets/projects/proj3.png';
-import proj4 from '../../assets/projects/proj4.png';
+import districtPlansGenerator from '../../assets/projects/proj1.png';
+import dailyToDoLists from '../../assets/projects/proj2.png';
+import wireframer from '../../assets/projects/proj3.png';
+import prodbyhamam from '../../assets/projects/proj4.png';
 
 export default function Projects() {
-  return (
-    <div id='projects-container' className='container-sm'>
-        <h1 className='text-center py-5'> Here’s a taste of some personal <br/> projects I’ve built </h1>
-        <div className='row mt-3'>
+    const [modalContent, setModalContent] = useState({
+        'DISTRICT PLANS GENERATOR' :   `A collaborative project, this web application implements a React-based frontend with stylization 
+                                        tools such as Materialize, and Bootstrap. Communication is structured through a REST API, facilitating 
+                                        communication between the front and back ends. The core of the project, being the Algorithm to generate 
+                                        new districting plans, is provided via Python and is executed through scripting commands to interact with 
+                                        Stony Brook's powerful server, deemed as the SeaWulf.`,
 
-            {/* Project 1 */}
-            <div className='col d-flex justify-content-center projects-item'> 
-                <Project image={proj1} />
-            </div> 
+        'DAILY TO-DO LIST MANAGER' :    `This web application features the creation of daily to-do lists for users to keep tasks in mind. Users can 
+                                        create a new account with their preferred email to log in and out as to save their tasks. They can move sub-tasks 
+                                        up and down by their priorities, and mark a task as completed when they are done. They can also delete/add new tasks 
+                                        at their free will. User authentication and data is managed by Google's Firebase/Firestore. Please see the last two 
+                                        screenshots to view how the database is structured.`,
 
-            {/* Project 2 */}
-            <div className='col d-flex justify-content-center projects-item'> 
-                <Project image={proj2} />
+        'WIREFRAMER' :                  `The project mimics the creation of a website prototype. It offers a playground for new creators to add and edit contents 
+                                        of a pseudo-website. User authentication and data storage is maintained by Google's Firebase and Firestore services. The 
+                                        screenshots below feature a rundown of a user's venture through the application. They can create an account and create wireframes 
+                                        at their leisure!`,
+
+        'MUSIC PRODUCTION WEBSITE' :    `The website application features a beats catalogue formatted by BeatStars.com and purchase options for music compositions. On the 
+                                        bottom, there is a contact option that redirects the message to one of my personal emails.`
+    });
+    const [modalImage, setModalImage] = useState(null);
+    const [modalTitle, setModalTitle] = useState(null);
+    const [modalDesc, setModalDesc] = useState(null);
+
+    const setModalContents = (image, title, desc) => {
+        setModalImage(image);
+        setModalTitle(title);
+        setModalDesc(desc);
+    }
+
+    return (
+        <div id='projects-container' className='container-sm'>
+            <h1 className='text-center py-5'> Here’s a taste of some personal <br/> projects I’ve built </h1>
+            <div className='row mt-3'>
+
+                {/* Project 1 */}
+                <div className='col d-flex justify-content-center projects-item'> 
+                    <Project setModalContents = {setModalContents} image={districtPlansGenerator} modalContent = {['DISTRICT PLANS GENERATOR', modalContent['DISTRICT PLANS GENERATOR']]}/>
+                </div> 
+
+                {/* Project 2 */}
+                <div className='col d-flex justify-content-center projects-item'> 
+                    <Project setModalContents = {setModalContents} image={dailyToDoLists} modalContent = {['DAILY TO-DO LIST MANAGER', modalContent['DAILY TO-DO LIST MANAGER']]}/>
+                </div>
+
+            </div>
+            <div className='row mt-5 pb-5 mb-3'>
+
+                {/* Project 3 */}
+                <div className='col d-flex justify-content-center projects-item'> 
+                    <Project setModalContents = {setModalContents} image={wireframer} modalContent = {['WIREFRAMER', modalContent['WIREFRAMER']]}/>
+                </div>
+
+                {/* Project 4 */}
+                <div className='col d-flex justify-content-center projects-item'> 
+                    <Project setModalContents = {setModalContents} image={prodbyhamam} modalContent = {['MUSIC PRODUCTION WEBSITE', modalContent['MUSIC PRODUCTION WEBSITE']]}/>
+                </div>
+
+            </div>
+
+            {/* Modal */}
+            <div class="modal fade" id="project-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{modalTitle}</h5>
+                            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            {modalDesc}
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
-        <div className='row mt-5 pb-5 mb-3'>
-
-            {/* Project 3 */}
-            <div className='col d-flex justify-content-center projects-item'> 
-                <Project image={proj3} />
-            </div>
-
-            {/* Project 4 */}
-            <div className='col d-flex justify-content-center projects-item'> 
-                <Project image={proj4} />
-            </div>
-
-        </div>
-    </div>
-  )
+    )
 }
