@@ -30,7 +30,13 @@ export default function Projects() {
                                         at their leisure!`,
 
         'MUSIC PRODUCTION WEBSITE' :    `The website application features a beats catalogue formatted by BeatStars.com and purchase options for music compositions. On the 
-                                        bottom, there is a contact option that redirects the message to one of my personal emails.`
+                                        bottom, there is a contact option that redirects the message to one of my personal emails.`,
+
+
+        'districtLink' :         'https://github.com/danielhamam/District-Plans-Generator',
+        'todoLink' :             'https://github.com/danielhamam/TodoList-React-Redux',
+        'wireframerLink' :       'https://github.com/danielhamam/Wireframer-Project',
+        'musicLink' :            'https://github.com/danielhamam/Music-Production-Website',
     });
     const [modalImage, setModalImage] = useState(null);
     const [modalTitle, setModalTitle] = useState(null);
@@ -49,12 +55,12 @@ export default function Projects() {
 
                 {/* Project 1 */}
                 <div className='col d-flex justify-content-center projects-item'> 
-                    <Project setModalContents = {setModalContents} image={districtPlansGenerator} modalContent = {['DISTRICT PLANS GENERATOR', modalContent['DISTRICT PLANS GENERATOR']]}/>
+                    <Project setModalContents = {setModalContents} link={modalContent['districtLink']} image={districtPlansGenerator} modalContent = {['DISTRICT PLANS GENERATOR', modalContent['DISTRICT PLANS GENERATOR']]}/>
                 </div> 
 
                 {/* Project 2 */}
                 <div className='col d-flex justify-content-center projects-item'> 
-                    <Project setModalContents = {setModalContents} image={dailyToDoLists} modalContent = {['DAILY TO-DO LIST MANAGER', modalContent['DAILY TO-DO LIST MANAGER']]}/>
+                    <Project setModalContents = {setModalContents} link={modalContent['todoLink']} image={dailyToDoLists} modalContent = {['DAILY TO-DO LIST MANAGER', modalContent['DAILY TO-DO LIST MANAGER']]}/>
                 </div>
 
             </div>
@@ -62,25 +68,26 @@ export default function Projects() {
 
                 {/* Project 3 */}
                 <div className='col d-flex justify-content-center projects-item'> 
-                    <Project setModalContents = {setModalContents} image={wireframer} modalContent = {['WIREFRAMER', modalContent['WIREFRAMER']]}/>
+                    <Project setModalContents = {setModalContents} link={modalContent['wireframerLink']} image={wireframer} modalContent = {['WIREFRAMER', modalContent['WIREFRAMER']]}/>
                 </div>
 
                 {/* Project 4 */}
                 <div className='col d-flex justify-content-center projects-item'> 
-                    <Project setModalContents = {setModalContents} image={prodbyhamam} modalContent = {['MUSIC PRODUCTION WEBSITE', modalContent['MUSIC PRODUCTION WEBSITE']]}/>
+                    <Project setModalContents = {setModalContents} link={modalContent['musicLink']} image={prodbyhamam} modalContent = {['MUSIC PRODUCTION WEBSITE', modalContent['MUSIC PRODUCTION WEBSITE']]}/>
                 </div>
 
             </div>
 
             {/* Modal */}
-            <div class="modal fade" id="project-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">{modalTitle}</h5>
-                            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+            <div className="modal fade" id="project-modal" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header d-flex justify-content-center">
+                            <h5 className="modal-title" id="exampleModalLabel">{modalTitle}</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
+                            <img className="modal-image" src={modalImage}/>
                             {modalDesc}
                         </div>
                     </div>

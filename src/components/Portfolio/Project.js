@@ -10,11 +10,11 @@ export const Project = (props) => {
   return (
     <div className='proj-item-wrapper'>
 
-        {/* Prject */}
+        {/* Project */}
         <img className="proj-image" src={props.image} alt="Project Image" />
         <div className='proj-selection'></div>
         <FontAwesomeIcon data-bs-toggle="modal" data-bs-target="#project-modal" className='proj-icon1' icon={solid('eye')} onClick={() => props.setModalContents(props.image, props.modalContent[0], props.modalContent[1])} />
-        <FontAwesomeIcon className='proj-icon2' icon={solid('arrow-up-right-from-square')} />
+        <FontAwesomeIcon className='proj-icon2' icon={solid('arrow-up-right-from-square')} onClick={() =>  window.open(props.link)}/>
 
     </div>
   )
