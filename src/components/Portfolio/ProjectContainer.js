@@ -82,8 +82,8 @@ export default function Projects() {
             <div className="modal fade" id="project-modal" tabIndex="-1">
                 <div className="modal-dialog modal-dialog-centered modal-lg">
                     <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">{modalTitle}</h5>
+                        <div className="modal-header text-center">
+                            <h5 className="modal-title w-100" id="exampleModalLabel">{modalTitle}</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div className="modal-body text-center p-4">
