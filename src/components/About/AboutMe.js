@@ -45,7 +45,7 @@ export default function AboutMe() {
         </div>
         <div className='about-spacing'>
             <img id='about-resume-icon' src={resume}/>
-            <p className='text-center'> <a> Hamam's Resume </a> </p>
+            <p className='text-center'> <a target="_blank" rel="noopener noreferrer" href="hamam-resume.pdf"> Hamam's Resume </a> </p>
         </div>
         <div className='about-spacing'></div>
     </div>
