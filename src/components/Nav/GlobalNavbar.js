@@ -5,7 +5,7 @@ export const GlobalNavbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid m-2">
-        <a className="navbar-brand ps-1" href="#">hamam.dev</a>
+        <a className="navbar-brand ps-1" href="/#">hamam.dev</a>
         <button className="navbar-toggler pe-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

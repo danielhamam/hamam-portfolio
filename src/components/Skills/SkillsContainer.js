@@ -26,28 +26,28 @@ import fcp from '../../assets/skills/fcp.png';
 import { SkillsCarousel } from './SkillsCarousel';
 
 export default function SkillsContainer() {
-    const [frontendSkills, setFrontendSkills] = useState({
+  
+    const frontendSkills = {
       'ReactJS' : [react, 90],
       'HTML / CSS' : [htmlcss, 90],
       'JavaScript' : [javascript, 90],
       'AngularJS' : [angular, 80],
       'Figma' : [figma, 85]
-    })
-    const [backendSkills, setbackendSkills] = useState({
+    }
+    const backendSkills = {
       'Python' : [python, 90],
       'Java' : [java, 90],
       'SQL' : [sql, 90],
       'Spring Boot' : [springboot, 90],
       'Bash' : [bash, 85]
-    })
-    const [otherSkills, setOtherSkills] = useState({
+    }
+    const otherSkills = {
       'Git' : [git, 90],
       'Agile' : [agile, 100],
       'Salesforce' : [salesforce, 85],
       'DNS' : [dns, 85],
       'Final Cut Pro' : [fcp, 80]
-    })
-
+    }
 
   return (
     <div id="skills-container">

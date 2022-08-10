@@ -6,7 +6,8 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './SkillsCarousel.css';
 
 export const SkillsCarousel = (props) => {
-    const [options, setOptions] = useState({
+    
+    const options= {
         loop: true,
         nav: true,
         dots : true,
@@ -21,8 +22,8 @@ export const SkillsCarousel = (props) => {
                 items: 4,
             },
         },
-    });
-    console.log(options)
+    };
+
   return (
     <div className="container skills">
         <div className='row skills-heading'>

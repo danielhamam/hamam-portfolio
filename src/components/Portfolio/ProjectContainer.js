@@ -11,7 +11,7 @@ import wireframer from '../../assets/projects/proj3.png';
 import prodbyhamam from '../../assets/projects/proj4.png';
 
 export default function Projects() {
-    const [modalContent, setModalContent] = useState({
+    const modalContent = {
         'DISTRICT PLANS GENERATOR' :   `A collaborative project, this web application implements a React-based frontend with stylization 
                                         tools such as Materialize, and Bootstrap. Communication is structured through a REST API, facilitating 
                                         communication between the front and back ends. The core of the project, being the Algorithm to generate 
@@ -37,7 +37,7 @@ export default function Projects() {
         'todoLink' :             'https://github.com/danielhamam/TodoList-React-Redux',
         'wireframerLink' :       'https://github.com/danielhamam/Wireframer-Project',
         'musicLink' :            'https://github.com/danielhamam/Music-Production-Website',
-    });
+    };
     const [modalImage, setModalImage] = useState(null);
     const [modalTitle, setModalTitle] = useState(null);
     const [modalDesc, setModalDesc] = useState(null);
