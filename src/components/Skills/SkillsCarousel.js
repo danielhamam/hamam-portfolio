@@ -36,7 +36,7 @@ export const SkillsCarousel = (props) => {
             {Object.keys(props.skills).map((skill) => {
                 return (
                     <div className="item text-center">
-                        <img src={props.skills[skill][0]} alt="Image"/>
+                        <img src={props.skills[skill][0]} alt="Skill"/>
                         <div className='item-text'> 
                             <div className="pt-4"> 
                                 {skill}

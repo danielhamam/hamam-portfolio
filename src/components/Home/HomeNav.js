@@ -12,7 +12,7 @@ export default function HomeNav() {
             <div className='row gx-5'> 
                 <div className='offset-2 col-4'>
                     <div> 
-                        <img className='home-nav-image' src={about}/>
+                        <img className='home-nav-image' src={about} alt="Figure 1"/>
                         <br/>
                         <span className='home-nav-font'> Learn a little bit about me and the start of my career as a software engineer </span>
                         <br/>
@@ -21,7 +21,7 @@ export default function HomeNav() {
                     </div>
                 </div>
                 <div className='col-4'>
-                    <img className='home-nav-image' src={skills}/>
+                    <img className='home-nav-image' src={skills} alt="Figure 1"/>
                     <br/>
                     <span className='home-nav-font'> View a list of my skills and abilities to see if I have what you’re looking for </span>
                     <br/>
@@ -32,7 +32,7 @@ export default function HomeNav() {
             <span className='home-nav-row-margin'> </span>
             <div className='row gx-5'>
                 <div className='offset-2 col-4'>
-                    <img className='home-nav-image' src={work}/>
+                    <img className='home-nav-image' src={work} alt="Figure 3"/>
                     <br/>
                     <span className='home-nav-font'> Jog through a list of personal projects that I dedicate my time building </span>
                     <br/>
@@ -40,7 +40,7 @@ export default function HomeNav() {
                     <a className='home-nav-link' href='/portfolio'> My Work </a>
                 </div>
                 <div className='col-4'>
-                    <img className='home-nav-image' src={photos}/>
+                    <img className='home-nav-image' src={photos} alt="Figure 4"/>
                     <br/>
                     <span className='home-nav-font'> Take a stroll through an album of pictures I took sometime during my life </span>
                     <br/>

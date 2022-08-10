@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <div className='d-flex flex-column justify-content-center align-items-center'>
         <div className='about-spacing'> 
-            <img id="about-portrait" src={portrait}/>
+            <img id="about-portrait" src={portrait} alt="About Portrait"/>
         </div>
         <div className='about-spacing'> 
             <div id="about-header">
@@ -44,7 +44,7 @@ export default function AboutMe() {
             </div>
         </div>
         <div className='about-spacing'>
-            <img id='about-resume-icon' src={resume}/>
+            <img id='about-resume-icon' src={resume} alt="About Resume Icon"/>
             <p className='text-center'> <a target="_blank" rel="noopener noreferrer" href="hamam-resume.pdf"> Hamam's Resume </a> </p>
         </div>
         <div className='about-spacing'></div>

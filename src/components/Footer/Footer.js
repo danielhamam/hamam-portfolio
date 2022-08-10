@@ -15,9 +15,9 @@ export default function Footer() {
                 </div>
                 <div className='col'> 
                     <div className='footer-social-links'>
-                        <img src={github}/> 
+                        <img src={github} alt="Github"/> 
                         &nbsp; &nbsp; &nbsp; &nbsp;
-                        <img src={linkedin}/>
+                        <img src={linkedin} alt="LinkedIn"/>
                     </div>
                 </div>
             </div>

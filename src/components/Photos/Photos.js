@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Smile from '../../assets/photo-album/Smile.png';
 import './Photos.css';
 
@@ -27,53 +27,53 @@ export const Photos = () => {
     <div id='photos-container' className='container'>
         <div className='d-flex justify-content-center align-items-center'>
             <h1 id="photos-title" className='text-center py-5 my-5'> Take a glance at a snapshot of my life </h1>
-            <img className="photos-smiley-icon pb-2" src={Smile} />
+            <img className="photos-smiley-icon pb-2" src={Smile} alt="Smile"/>
         </div>
         <div className='row py-5'>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={baby}/>
+                <img className='photo-item' src={baby} alt="Baby"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={baba}/>
+                <img className='photo-item' src={baba} alt="Baba"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={beach}/>
+                <img className='photo-item' src={beach} alt="Beach"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={blackhat}/>
-            </div>
-        </div>
-        <div className='row py-5'>
-            <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={brooklyn}/>
-            </div>
-            <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={chelsea}/>
-            </div>
-            <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={city}/>
-            </div>
-            <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={cousin}/>
+                <img className='photo-item' src={blackhat} alt="Black hat"/>
             </div>
         </div>
         <div className='row py-5'>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={friends}/>
+                <img className='photo-item' src={brooklyn} alt="Brooklyn"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={knicks}/>
+                <img className='photo-item' src={chelsea} alt="Chelsea"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={mama}/>
+                <img className='photo-item' src={city} alt="City"/>
             </div>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={nyc}/>
+                <img className='photo-item' src={cousin} alt="Cousin"/>
             </div>
         </div>
         <div className='row py-5'>
             <div className='col photo-item-wrapper'>
-                <img className='photo-item' src={timhortons}/>
+                <img className='photo-item' src={friends} alt="Friends"/>
+            </div>
+            <div className='col photo-item-wrapper'>
+                <img className='photo-item' src={knicks} alt="Knicks"/>
+            </div>
+            <div className='col photo-item-wrapper'>
+                <img className='photo-item' src={mama} alt="Mama"/>
+            </div>
+            <div className='col photo-item-wrapper'>
+                <img className='photo-item' src={nyc} alt="NYC"/>
+            </div>
+        </div>
+        <div className='row py-5'>
+            <div className='col photo-item-wrapper'>
+                <img className='photo-item' src={timhortons} alt="Tim Horton's"/>
             </div>
         </div>
 

@@ -87,7 +87,7 @@ export default function Projects() {
                             <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div className="modal-body text-center p-4">
-                            <img className="modal-image" src={modalImage}/>
+                            <img className="modal-image" src={modalImage} alt="Project"/>
                             <div className='pt-3'> {modalDesc} </div>
                         </div>
                     </div>
