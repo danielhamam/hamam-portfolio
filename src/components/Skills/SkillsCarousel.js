@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Rating } from 'react-simple-star-rating';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './SkillsCarousel.css';
 
 export const SkillsCarousel = (props) => {
-    
+
     const options= {
         loop: true,
         nav: true,

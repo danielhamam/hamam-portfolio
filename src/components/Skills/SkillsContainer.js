@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './SkillsContainer.css';
 
 // Frontend
@@ -26,7 +26,7 @@ import fcp from '../../assets/skills/fcp.png';
 import { SkillsCarousel } from './SkillsCarousel';
 
 export default function SkillsContainer() {
-  
+
     const frontendSkills = {
       'ReactJS' : [react, 90],
       'HTML / CSS' : [htmlcss, 90],
