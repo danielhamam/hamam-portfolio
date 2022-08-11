@@ -27,7 +27,7 @@ export default function Introduction() {
                 </div>
             </div>
             <div className='col-4'>
-                <iframe title="Coding Gif" id="intro-image" src="https://giphy.com/embed/ndIq5ohg1pyfqyVOII" frameBorder="0" class="giphy-embed"></iframe>
+                <a> <iframe title="Coding Gif" id="intro-image" src="https://giphy.com/embed/ndIq5ohg1pyfqyVOII" frameBorder="0" class="giphy-embed"></iframe> </a>
             </div>
         </div>
     </div>
