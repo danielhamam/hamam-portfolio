@@ -7,6 +7,7 @@
 }
 
 .footer-text-content {
+    font-size: 1.4rem;
     margin-left: 7%;
     letter-spacing: 1.3px;
     font-family: 'Bitter';
@@ -16,5 +17,9 @@
 
 .footer-social-links {
     float: right;
-    /* margin-right: 7%; */
+}
+
+.footer-icon-image {
+    width: 2.5rem;
+    height: 2.5rem;
 }
