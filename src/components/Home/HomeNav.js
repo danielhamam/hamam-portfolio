@@ -8,7 +8,7 @@ import photos from '../../assets/homepage/stick_figures/photos.png';
 export default function HomeNav() {
   return (
     <div id="home-nav-wrapper"> 
-        <div id="home-nav" className='container'>
+        <div id="home-nav" className='container px-5'>
             <div className='row gx-5'> 
                 <div className='offset-2 col-4'>
                     <div> 
