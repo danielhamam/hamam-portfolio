@@ -1,7 +1,13 @@
-export function createWordSphere() {
-  let width = 250;
-  function handleResize() { width = window.innerWidth; }
-  window.addEventListener("resize", handleResize)
+/*
+* 
+* Title: Wordsphere React Component
+* NOTE: I added a width tracker via event listener to 
+* 
+* Source: https://github.com/cong-min/TagCloud#use-event-delegation-bind-event-listener-to-tagcloud-instance-root-element
+* 
+*/
+
+export function createWordSphere(tagCloud, width) {
 
   const TagCloud = require('TagCloud');
 
@@ -13,8 +19,10 @@ export function createWordSphere() {
     'Bootstrap', 'AWS', 'Salesforce', 'Agile'
   ];
 
-  TagCloud('.wordsphere', myTags, {
-    radius: width - (width * .3),
+  if (tagCloud != null) tagCloud.destroy()
+
+  return TagCloud('.wordsphere', myTags, {
+    radius: width,
     maxSpeed: 'fast',
     initSpeed: 'fast',
     direction: 135,

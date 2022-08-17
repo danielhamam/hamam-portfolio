@@ -2,13 +2,23 @@ import React, { useEffect, useRef } from 'react';
 import './SkillsIntro.css';
 import { createWordSphere } from './Wordsphere';
 
+let tagCloud = null
+window.addEventListener("resize", handleResize)
+function handleResize() { 
+    let width = window.innerWidth - (window.innerWidth * .85);
+    tagCloud = createWordSphere(tagCloud, width); 
+}
+
 export default function SkillsIntro() {
-    const tagCloudLoaded = useRef(false); // useRef does not re-render when updated
+    // const tagCloudLoaded = useRef(false); // useRef does not re-render when updated
+    // let tagCloud = null;
 
     useEffect(() => {
-        if (tagCloudLoaded.current) return;
-        createWordSphere();
-        tagCloudLoaded.current = true;
+        // if (tagCloudLoaded.current) return;
+        // console.log(window.innerWidth)
+        let width = window.innerWidth - (window.innerWidth * .85);
+        tagCloud = createWordSphere(tagCloud, width); 
+        // tagCloudLoaded.current = true;
     });
   return (
     <div id="skills-wrapper" className="container-fluid d-flex justify-content-center align-items-center">
