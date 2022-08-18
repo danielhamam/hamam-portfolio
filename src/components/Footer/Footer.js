@@ -15,11 +15,11 @@ export default function Footer() {
                 </div>
                 <div className='col'> 
                     <div className='footer-social-links'>
-                        <a href='https://github.com/danielhamam' target='_blank'> 
+                        <a href='https://github.com/danielhamam' target='_blank' rel="noopener noreferrer"> 
                             <img src={github} alt="Github"  className='footer-icon-image'/> 
                         </a>
                         &nbsp; &nbsp; &nbsp; &nbsp;
-                        <a href='https://www.linkedin.com/in/danielhamam/' target='_blank'> 
+                        <a href='https://www.linkedin.com/in/danielhamam/' target='_blank' rel="noopener noreferrer"> 
                             <img src={linkedin} alt="LinkedIn" className='footer-icon-image'/> 
                         </a>
                     </div>
