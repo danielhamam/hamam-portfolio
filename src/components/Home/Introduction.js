@@ -23,7 +23,7 @@ export default function Introduction() {
                         />
                         <br/>
                         &nbsp;&nbsp;
-                        <button id='intro-button'> CONTACT ME </button>
+                        <button id='intro-button' onClick={() => window.location = 'mailto:danielhamam@outlook.com'}> CONTACT ME </button>
                     </div>
                 </div>
             </div>

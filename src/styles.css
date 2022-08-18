@@ -3,6 +3,9 @@
 
 :root {
 
+    /* Colors */
+    --main-blue: #3e5a9d;
+
     /* Homepage */
     --fs-xl-name: 5vw;
     --fs-600-typography: 4.2vw;

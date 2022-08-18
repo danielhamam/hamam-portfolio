@@ -4,6 +4,7 @@ import { createWordSphere } from './Wordsphere';
 
 export default function SkillsIntro() {
     const tagCloud = useRef(null);
+    const skillsContainer = useRef(null);
 
     useEffect(() => {
         if (tagCloud.current === null) { tagCloud.current = createWordSphere(null, window.innerWidth - (window.innerWidth * .85)) }

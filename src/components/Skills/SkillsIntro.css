@@ -18,7 +18,6 @@
 #skills-button {
     display: inline-block;
     font-family: 'Sudo Var';
-    /* font-size: var(--fs-400-button); */
     font-size: 2rem;
     background: #FFFFFF;
     border: 1px solid #000000;
@@ -30,7 +29,8 @@
 }
 
 #skills-button:hover {
-    background-color: lightblue;
+    color: white;
+    background-color: var(--main-blue);
     transition: 0.5s;
 }
 

@@ -24,20 +24,18 @@
 #intro-button {
     display: inline-block;
     font-family: 'Sudo Var';
-    /* font-size: var(--fs-400-button); */
     font-size: 2rem;
     background: #FFFFFF;
     border: 1px solid #000000;
     border-radius: .8rem;
     letter-spacing: .5rem; 
     width: 26rem;
-    /* padding-top: 3%;
-    padding-bottom: 3%; */
     padding: 1rem;
 }
 
 #intro-button:hover {
-    background-color: lightblue;
+    color: white;
+    background-color: var(--main-blue);
     transition: 0.5s;
 }
 

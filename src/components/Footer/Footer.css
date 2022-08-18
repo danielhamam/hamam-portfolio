@@ -23,3 +23,7 @@
     width: 2.5rem;
     height: 2.5rem;
 }
+
+.footer-icon-image:hover {
+    background-color: var(--main-blue);
+}
