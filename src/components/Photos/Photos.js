@@ -25,9 +25,9 @@ import timhortons from '../../assets/photo-album/photos/timhortons.jpg';
 export const Photos = () => {
   return (
     <div id='photos-container' className='container'>
-        <div className='d-flex justify-content-center align-items-center'>
-            <h1 id="photos-title" className='text-center py-5 my-5'> Take a glance at a snapshot of my life </h1>
-            <img className="photos-smiley-icon pb-2" src={Smile} alt="Smile"/>
+        <div className='d-flex justify-content-center align-items-center py-5 my-5'>
+            <h1 id="photos-title" className='text-center'> Take a glance at a snapshot of my life </h1>
+            <img className="photos-smiley-icon mb-3 ms-3" src={Smile} alt="Smile"/>
         </div>
         <div className='row py-5'>
             <div className='col photo-item-wrapper'>

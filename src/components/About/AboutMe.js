@@ -43,7 +43,7 @@ export default function AboutMe() {
                     perfection. My objective is to work with a team to maintain a revenue-generating project that has groundbreaking potential. I take pride in building team-based relationships with other developers and discussing how to maximize our work's potential. </p>
             </div>
         </div>
-        <div className='about-spacing'>
+        <div style={{marginTop: '1.5rem'}}>
             <img id='about-resume-icon' src={resume} alt="About Resume Icon"/>
             <p className='text-center'> <a target="_blank" rel="noopener noreferrer" href="hamam-resume.pdf"> Hamam's Resume </a> </p>
         </div>
