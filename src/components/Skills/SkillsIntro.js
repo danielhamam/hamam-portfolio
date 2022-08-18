@@ -1,24 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './SkillsIntro.css';
 import { createWordSphere } from './Wordsphere';
 
-let tagCloud = null
-window.addEventListener("resize", handleResize)
-function handleResize() { 
-    let width = window.innerWidth - (window.innerWidth * .85);
-    tagCloud = createWordSphere(tagCloud, width); 
-}
-
 export default function SkillsIntro() {
+    const tagCloud = useRef(null);
 
     useEffect(() => {
-        let width = window.innerWidth - (window.innerWidth * .85);
-        tagCloud = createWordSphere(tagCloud, width); 
+        if (tagCloud.current === null) { tagCloud.current = createWordSphere(null, window.innerWidth - (window.innerWidth * .85)) }
+        function handleResize() { tagCloud.current = createWordSphere(tagCloud.current, window.innerWidth - (window.innerWidth * .85)); }
+        window.addEventListener("resize", handleResize)
     });
   return (
     <div id="skills-wrapper" className="container-fluid d-flex justify-content-center align-items-center">
         <div className="row w-100">
-            <div className='col-7 d-flex justify-content-end align-items-center'>
+            <div className='col-6 d-flex justify-content-end align-items-center'>
                 <div className='mt-5 text-center'> 
                     <span id='skills-desc' className=''> 
                     I program in all different <br/> kinds of ways. Catch me on all <br/> sides of the stack! 
@@ -27,7 +22,7 @@ export default function SkillsIntro() {
                     <button id='skills-button'> SCROLL DOWN </button>
                 </div>
             </div>
-            <div className='col-5 d-flex justify-content-start align-items-center ps-5'>
+            <div className='col-6 ps-5'>
                 <span className="wordsphere"></span>
             </div>
         </div>

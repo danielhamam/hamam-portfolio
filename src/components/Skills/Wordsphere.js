@@ -1,8 +1,7 @@
 /*
 * 
 * Title: Wordsphere React Component
-* NOTE: I added a width tracker via event listener to 
-* 
+* NOTE: I added a width tracker via event listener to make tagCloud responsive
 * Source: https://github.com/cong-min/TagCloud#use-event-delegation-bind-event-listener-to-tagcloud-instance-root-element
 * 
 */
@@ -23,8 +22,8 @@ export function createWordSphere(tagCloud, width) {
 
   return TagCloud('.wordsphere', myTags, {
     radius: width,
-    maxSpeed: 'fast',
-    initSpeed: 'fast',
+    maxSpeed: 'slow',
+    initSpeed: 'slow',
     direction: 135,
     keep: true,
   });
