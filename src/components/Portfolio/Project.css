@@ -1,6 +1,7 @@
 .proj-image, .proj-selection {
-    height: 15rem !important;
-    width: 24rem !important;
+    /* 8:5 Aspect Ratio */
+    height: 100%;
+    width: 100%;
     border: 1px solid #e7c9a9;
     padding: 0.6rem;
 }
@@ -13,26 +14,28 @@
     margin : 1rem;
 }
 
-.proj-icon1 {
+.proj-icon1, .proj-icon2 {
     position: absolute;
     opacity: 0;
-    margin-left: -5rem;
     color: white;
-    font-size: 2.7rem;
+    font-size: 5.7rem;
     z-index: 2
 }
+
+.proj-icon1 {
+    margin-left: -10rem;
+}
 .proj-icon2 {
-    position: absolute;
-    opacity: 0;
-    margin-left: 5rem;
-    color: white;
-    font-size: 2.7rem;
-    z-index:2
+    margin-left: 10rem;
+}
+
+.proj-icon1:hover, .proj-icon2:hover {
+    color: var(--main-blue);
 }
 
 .proj-item-wrapper:hover .proj-icon1, .proj-item-wrapper:hover .proj-icon2 {
     opacity: .70 !important;
-    transition: 0.4s ease-in-out !important;
+    transition: 0.2s ease-in-out !important;
     cursor: pointer !important;
 }
 

@@ -11,7 +11,7 @@
 }
 
 .photo-item {
-    width: 15rem;
+    width: 230px;
 }
 
 .photo-item-wrapper {
@@ -20,4 +20,10 @@
     align-items: center;
     justify-content: center;
     padding-top: 1.5rem;
+}
+
+@media(max-width: 481px ) {
+    .photo-item {
+        width: 150px;
+    }
 }

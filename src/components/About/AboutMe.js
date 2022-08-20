@@ -23,12 +23,12 @@ export default function AboutMe() {
                     laptop from somewhere in the attic...but I finally owned a personal connection to the internet without anyone disrupting me. </p>
                 {/* Paragraph 2 */}
                 <p> There were two things I was obsessed with on my computer. The first was preserving a clean desktop. If there’s anything I despise 
-                    it’s the compulsive hoarding done by 90% of the internet users. At least use some folders...or better yet, delete (and backup) unused files! 
+                    it’s the <a href='https://en.wikipedia.org/wiki/Compulsive_hoarding' target='_blank' rel="noopener noreferrer">compulsive hoarding</a> done by 90% of the internet users. At least use some folders...or better yet, delete (and backup) unused files! 
                     I swore an oath to never fall victim to this delusion, even learning simple shell commands as a young teen to optimize my directory storage 
                     (and fine, to look cool in front of my friends). </p>
                 {/* Paragraph 3 */}
                 <p> The second was the notion of security. Growing up, the threats of being doxed and having passwords stolen was the most daunting form of cyberbullying - 
-                    one that I would get each time I won a PvP duel in Runescape. In my early teens, I set out to learn all the big, scary terms to use the next time I engaged 
+                    one that I would get each time I won a PvP duel in <a href='https://runescape.fandom.com/wiki/PvP_world' target='_blank' rel="noopener noreferrer">Runescape</a>. In my early teens, I set out to learn all the big, scary terms to use the next time I engaged 
                     in a dispute with a so-called doxxer. While shifting through the basics - phishing, encryption, HTTP - I came across a term that would change my life forever: Python! </p>
                 {/* Paragraph 4 */}
                 <p> I was always a curious kid. Stumbling upon Python at a time when I never knew what I wanted to do exposed me to the concept of creating something from nothing. The idea

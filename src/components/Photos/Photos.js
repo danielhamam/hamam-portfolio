@@ -30,43 +30,43 @@ export const Photos = () => {
             <img className="photos-smiley-icon mb-3 ms-3" src={Smile} alt="Smile"/>
         </div>
         <div className='row py-5'>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={baby} alt="Baby"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={baba} alt="Baba"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={beach} alt="Beach"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={blackhat} alt="Black hat"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={brooklyn} alt="Brooklyn"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={chelsea} alt="Chelsea"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={city} alt="City"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={cousin} alt="Cousin"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={friends} alt="Friends"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={knicks} alt="Knicks"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={mama} alt="Mama"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={nyc} alt="NYC"/>
             </div>
-            <div className='col col-sm-4 col-lg-3 photo-item-wrapper'>
+            <div className='col col-sm-6 col-lg-3 photo-item-wrapper'>
                 <img className='photo-item' src={timhortons} alt="Tim Horton's"/>
             </div>
         </div>
