@@ -54,25 +54,25 @@ export default function Projects() {
             <div className='row mt-3'>
 
                 {/* Project 1 */}
-                <div className='col d-flex justify-content-center projects-item'> 
+                <div className='col-md-6 d-flex justify-content-center projects-item'> 
                     <Project setModalContents = {setModalContents} link={modalContent['districtLink']} image={districtPlansGenerator} modalContent = {['DISTRICT PLANS GENERATOR', modalContent['DISTRICT PLANS GENERATOR']]}/>
                 </div> 
 
                 {/* Project 2 */}
-                <div className='col d-flex justify-content-center projects-item'> 
+                <div className='col-md-6 d-flex justify-content-center projects-item'> 
                     <Project setModalContents = {setModalContents} link={modalContent['todoLink']} image={dailyToDoLists} modalContent = {['DAILY TO-DO LIST MANAGER', modalContent['DAILY TO-DO LIST MANAGER']]}/>
                 </div>
 
             </div>
-            <div className='row mt-5 pb-5 mb-3'>
+            <div className='row pb-5 mb-3'>
 
                 {/* Project 3 */}
-                <div className='col d-flex justify-content-center projects-item'> 
+                <div className='col-md-6 d-flex justify-content-center projects-item'> 
                     <Project setModalContents = {setModalContents} link={modalContent['wireframerLink']} image={wireframer} modalContent = {['WIREFRAMER', modalContent['WIREFRAMER']]}/>
                 </div>
 
                 {/* Project 4 */}
-                <div className='col d-flex justify-content-center projects-item'> 
+                <div className='col-md-6 d-flex justify-content-center projects-item'> 
                     <Project setModalContents = {setModalContents} link={modalContent['musicLink']} image={prodbyhamam} modalContent = {['MUSIC PRODUCTION WEBSITE', modalContent['MUSIC PRODUCTION WEBSITE']]}/>
                 </div>
 
