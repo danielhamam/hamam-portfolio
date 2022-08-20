@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactTypingEffect from 'react-typing-effect';
 import codingGif from '../../assets/homepage/coding-gif.gif'
+import codingGif2 from '../../assets/homepage/coding-gif2.gif'
 
 export default function Introduction() {
   return (
@@ -29,7 +30,7 @@ export default function Introduction() {
             </div>
             <div className='col-4'>
                 {/* <iframe src="https://giphy.com/embed/ndIq5ohg1pyfqyVOII" id="intro-image" title="Coding Gif" frameBorder="0" clasNames="giphy-embed" ></iframe><a href="https://giphy.com/gifs/drummachinefunk-create-develop-developing-ndIq5ohg1pyfqyVOII"> </a> */}
-                <img src={codingGif} id="intro-image" title="Coding Gif" alt="hamam-coding"/>
+                <img src={codingGif2} id="intro-image" title="Coding Gif" alt="hamam-coding"/>
             </div>
         </div>
     </div>
