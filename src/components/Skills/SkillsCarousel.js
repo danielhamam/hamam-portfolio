@@ -15,10 +15,10 @@ export const SkillsCarousel = (props) => {
             0: {
                 items: 1,
             },
-            600: {
+            300: {
                 items: 2,
             },
-            1000: {
+            450: {
                 items: 3,
             },
             1500: {
@@ -40,12 +40,12 @@ export const SkillsCarousel = (props) => {
             {Object.keys(props.skills).map((skill) => {
                 return (
                     <div className="item text-center">
-                        <img src={props.skills[skill][0]} alt="Skill"/>
+                        <img src={props.skills[skill][0]} alt="Skill" className='skill-image'/>
                         <div className='item-text'> 
                             <div className="pt-4"> 
                                 {skill}
                                 <span className='custom-br-title'></span>
-                                <Rating className='custom-star-rating' ratingValue={props.skills[skill][1]} /* Star Rating */ />
+                                <Rating className='custom-star-rating' size={20} ratingValue={props.skills[skill][1]} /* Star Rating */ />
                             </div>
                         </div>
                      </div>

@@ -21,7 +21,7 @@ export function createWordSphere(tagCloud, width) {
   if (tagCloud != null) tagCloud.destroy()
 
   return TagCloud('.wordsphere', myTags, {
-    radius: width > 280 ? 280 : width,
+    radius: width > 235 ? 235 : width,
     maxSpeed: 'slow',
     initSpeed: 'slow',
     direction: 135,

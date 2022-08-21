@@ -9,21 +9,26 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+#skills-desc-wrapper {
+    /* font-size: 20pt; */
+    margin-right: 15px;
+}
+
 #skills-desc {
     font-weight: 800;
     /* font-size: var(--fs-xl-name);  */
-    font-size: 2.7rem;
+    font-size: 25pt;
 }
 
 #skills-button {
     display: inline-block;
     font-family: 'Sudo Var';
-    font-size: 2rem;
+    font-size: 22pt;
     background: #FFFFFF;
     border: 1px solid #000000;
     border-radius: .8rem;
     letter-spacing: .5rem; 
-    width: 26rem;
+    width: 350px;
     margin-top: 3rem;
     padding: 1rem;
 }
@@ -36,12 +41,12 @@
 
 .custom-br-name {
     display: block;
-    margin-bottom: -.5em;
+    margin-bottom: -.5rem;
 }
 
 .custom-br-position {
     display: block;
-    margin-bottom: -.4em;
+    margin-bottom: -.4rem;
 }
 
 #skills-image {
@@ -51,20 +56,82 @@
 
 /* Media Queries */
 
-@media(max-width: 1200px) {
+@media(max-width: 1137px) {
     #skills-desc {
-        font-size: 2.5rem;
+        font-size: 22pt;
+    }
+    #skills-button {
+        width: 330px;
+        font-size: 19pt;
     }
 }
 
 @media(max-width: 991px) {
     #skills-desc {
-        font-size: 2.3rem;
+        font-size: 18pt;
+    }
+    #skills-button {
+        width: 310px;
+        font-size: 17pt;
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 828px) {
     #skills-desc {
-        font-size: 2rem;
+        font-size: 14pt;
+    }
+    #skills-button {
+        width: 240px;
+        font-size: 13pt;
+    }
+}
+
+@media(max-width: 652px) {
+    #skills-desc {
+        font-size: 12pt;
+    }
+    #skills-button {
+        width: 170px;
+        font-size: 9pt;
+    }
+}
+
+@media(max-width: 564px) {
+    #skills-desc {
+        font-size: 10pt;
+    }
+    #skills-button {
+        width: 150px;
+        font-size: 7pt;
+    }
+}
+
+@media(max-width: 476px) {
+    #skills-desc {
+        font-size: 8pt;
+    }
+    #skills-button {
+        width: 120px;
+        font-size: 6pt;
+    }
+}
+
+@media(max-width: 388px) {
+    #skills-desc {
+        font-size: 7pt;
+    }
+    #skills-button {
+        width: 110px;
+        font-size: 5pt;
+    }
+}
+
+@media(max-width: 343px) {
+    #skills-desc {
+        font-size: 6pt;
+    }
+    #skills-button {
+        width: 100px;
+        font-size: 5pt;
     }
 }

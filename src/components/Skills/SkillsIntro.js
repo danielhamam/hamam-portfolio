@@ -12,17 +12,17 @@ export default function SkillsIntro() {
     });
   return (
     <div id="skills-wrapper" className="container d-flex justify-content-center align-items-center">
-        <div className="row w-100">
-            <div className='col-7 col-xxl-6 d-flex justify-content-end align-items-center'>
-                <div className='mt-5 text-center'> 
-                    <span id='skills-desc' className=''> 
+        <div className="row">
+            <div className='col-7 col-xxl-7 d-flex justify-content-end align-items-center'>
+                <div id="skills-desc-wrapper" className='mt-5 text-center'> 
+                    <span id='skills-desc'> 
                         I program in all different <br/> kinds of ways. Catch me on all <br/> sides of the stack! 
                     </span>
                     <span className='custom-br-position'></span>
                     <button id='skills-button'> SCROLL DOWN </button>
                 </div>
             </div>
-            <div className='col-5 col-xxl-6 ps-5 d-flex justify-content-center align-items-center"'>
+            <div className='col-5 col-xxl-5 ps-2 pt-3 d-flex align-items-center'>
                 <span className="wordsphere"></span>
             </div>
         </div>

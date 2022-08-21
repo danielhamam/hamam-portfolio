@@ -34,3 +34,14 @@
     height: 100px;
     margin: auto;
 }
+
+.custom-star-rating {
+}
+
+@media(max-width: 600px) {
+    .item > img {
+        width: 70px !important;
+        height: 70px;
+        margin: auto;
+    }
+}
