@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div id="footer-wrapper">
         <div className='container-fluid'> 
-            <div className='row p-4'> 
+            <div className='row py-4 d-flix align-items-center'> 
                 <div className='col'> 
                     <div className='footer-text-content'> 
                         All Rights Reserved To Hamam

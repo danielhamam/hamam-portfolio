@@ -54,11 +54,15 @@ export default function SkillsContainer() {
         {/* Frontend Skills */}
         <SkillsCarousel title = 'Frontend' skills = {frontendSkills}/>
 
+        <br/> <br/>
         {/* Backend Skills */}
         <SkillsCarousel title = 'Backend' skills = {backendSkills}/>
 
+        <br/> <br/>
         {/* Other Skills */}
         <SkillsCarousel title = 'Tools, Frameworks & Others' skills = {otherSkills}/>
+
+        <br/> <br/>
     </div>
   )
 }

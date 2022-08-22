@@ -7,7 +7,7 @@
 }
 
 .footer-text-content {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 7%;
     letter-spacing: 1.3px;
     font-family: 'Bitter';
@@ -16,6 +16,7 @@
 }
 
 .footer-social-links {
+    margin-right: 7%;
     float: right;
 }
 
@@ -24,6 +25,7 @@
     height: 2.5rem;
 }
 
-.footer-icon-image:hover {
-    background-color: var(--main-blue);
+.footer-icon-image:hover, .footer-text-content:hover {
+    cursor: pointer;
+    filter: opacity(0.5) drop-shadow(0 0 0 var(--main-blue));
 }

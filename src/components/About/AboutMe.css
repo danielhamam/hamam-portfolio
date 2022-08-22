@@ -19,24 +19,18 @@
 #about-text {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: #000000;
     opacity: 0.5;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 
 .about-text-container {
-    width: 70rem; 
+    width: 70%; 
 }
 
 #about-resume-icon {
     margin-top: -2rem;
     height: 9rem;
     width: 9rem;
-}
-
-@media(max-width: 900px) {
-    .about-text-container {
-        width: 50rem; 
-    }
 }

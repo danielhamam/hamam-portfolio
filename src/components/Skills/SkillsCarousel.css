@@ -40,8 +40,13 @@
 
 @media(max-width: 600px) {
     .item > img {
-        width: 70px !important;
-        height: 70px;
+        width: 50px !important;
+        height: 50px;
         margin: auto;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 6px;
+        height: 6px;
     }
 }
