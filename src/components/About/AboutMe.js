@@ -18,7 +18,7 @@ export default function AboutMe() {
             <div id='about-text'> 
                 {/* Set 1 */}
                 <p> Most people call me Danny or Hamam. </p> 
-                <p> I spent my childhood about 50 minutes north of Manhattan in a city named <i>Yonkers</i>. </p>
+                <p> I was raised 50 minutes north of Manhattan in a city named <i>Yonkers</i>. </p>
                 <p> In many ways I consider myself a “90s” kid: the typical day-to-day grind of blowing into my Nintendo 64 when a game stopped working and gossiping 
                     on AOL messenger using my dad’s old big computer. But what really attracted me was when I secured my first computer. Granted, it was my mother’s old 
                     laptop from somewhere in the attic...but I finally owned a personal connection to the internet without anyone disrupting me. </p>
@@ -50,7 +50,7 @@ export default function AboutMe() {
                 <p> - Hamam </p>
             </div>
         </div>
-        <div style={{width: '15%', marginTop: '1.5rem'}} className='text-center'>
+        <div style={{width: '30%', marginTop: '1.5rem'}} className='text-center'>
             <img id='about-resume-icon' src={resume} alt="About Resume Icon"/>
             <p id='about-resume-text' className='text-center'> <a target="_blank" rel="noopener noreferrer" href="hamam-resume.pdf"> Hamam's Resume </a> </p>
         </div>
