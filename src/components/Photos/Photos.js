@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Smile from '../../assets/photo-album/Smile.png';
 import './Photos.css';
+
+const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 8
 
 export const Photos = () => {
     const [photos, setPhotos] = useState(null);
@@ -20,8 +22,8 @@ export const Photos = () => {
         const loadImages = () => {
             if ((window.innerHeight + Math.ceil(window.pageYOffset + 1)) >= document.body.offsetHeight) {
                 if (photos && numPhotos < Object.keys(photos).length) {
-                    let amountPhotosAfterLoad = numPhotos + 12 <= Object.keys(photos).length ? numPhotos + 12 : Object.keys(photos).length;
-                    // console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
+                    let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
+                    console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
                     setShowLoadingPhotos(true)
                     setNumPhotos(amountPhotosAfterLoad);
                     setShowLoadingPhotos(false)
