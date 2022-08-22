@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Smile from '../../assets/photo-album/Smile.png';
 import './Photos.css';
 
-const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 8
+const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 4
 
 export const Photos = () => {
     const [photos, setPhotos] = useState(null);
