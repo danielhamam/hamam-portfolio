@@ -41,7 +41,7 @@ export default function AboutMe() {
                 {/* Set 5 */}
                 <p> Then the decision to choose my career path suddenly came. </p>
                 <p> I was torn between medicine and computer science. Everyone - my teachers included - expected me to become a doctor. I always participated in my advanced 
-                    Biology classes and consistently ended up with top grades on the final exams. I also scored a 34/36 on the ACT’s science section. </p>
+                    Biology classes and consistently ended up with top grades on the final exams. </p>
                 <p> With all achievements aside, the tradeoff between making others happy and being my authentic self was clear to me. That's when my journey started. </p>
                 {/* Set 6 */}
                 <p> A dream of mine is to collaborate with this generation's pioneers in pursuit of chasing after a greater purpose. Leaving an impact and revolutionizing the industry has always pushed me to achieve 
