@@ -1,8 +1,14 @@
 # Hamam's Portfolio
+
+## Author
+```
+This portfolio was created by Daniel Hamam. All rights are reserved and must be credited to the original author.
+```
 ## Setup
 ```
 (1) Make sure you have the following:
     - NodeJS version 16.13.0+
+    - A coffee prepared for reading all my code.
 (2) NPM install
     - Downloads all dependencies used.
 ```
@@ -12,6 +18,7 @@
     - npm start
 ```
 ## Copyright License
+
 ```
 MIT License
 
