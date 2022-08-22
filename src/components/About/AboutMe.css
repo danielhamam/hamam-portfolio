@@ -26,11 +26,15 @@
 }
 
 .about-text-container {
-    width: 70%; 
+    width: 75%; 
 }
 
 #about-resume-icon {
     margin-top: -2rem;
     height: 9rem;
     width: 9rem;
+}
+
+#about-resume-text {
+    font-size: 1.3rem;
 }
