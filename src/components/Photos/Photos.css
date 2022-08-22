@@ -22,6 +22,19 @@
     padding-top: 1.5rem;
 }
 
+.photo-enter {
+    animation: photo-transition 3s;
+ }
+
+@keyframes photo-transition{
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media(max-width: 481px ) {
     .photo-item {
         width: 150px;

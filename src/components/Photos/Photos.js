@@ -6,7 +6,7 @@ const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 8
 
 export const Photos = () => {
     const [photos, setPhotos] = useState(null);
-    const [numPhotos, setNumPhotos] = useState(12);
+    const [numPhotos, setNumPhotos] = useState(8);
     const [showLoadingPhotos, setShowLoadingPhotos] = useState(false)
 
     function importPhotoAlbum(source) {
@@ -47,7 +47,7 @@ export const Photos = () => {
                 {
                     photos != null ? (photos.filter(function (image,index) { return index < numPhotos }).map((image, index) => {
                         return (
-                            <div className='col col-sm-6 col-lg-3 photo-item-wrapper' key={index} >
+                            <div className='col col-sm-6 col-lg-3 photo-item-wrapper photo-enter' key={index} >
                                 <img className='photo-item' key={index} src={image} alt="life-snap"/>
                             </div>
                         )})) : 'Loading photos...'
