@@ -31,21 +31,21 @@ export default function SkillsContainer() {
       'ReactJS' : [react, 90],
       'HTML / CSS' : [htmlcss, 90],
       'JavaScript' : [javascript, 90],
-      'AngularJS' : [angular, 80],
+      'AngularJS' : [angular, 70],
       'Figma' : [figma, 85]
     }
     const backendSkills = {
       'Python' : [python, 90],
-      'Java' : [java, 90],
+      'Java' : [java, 88],
       'SQL' : [sql, 90],
-      'Spring Boot' : [springboot, 90],
-      'Bash' : [bash, 85]
+      'Spring Boot' : [springboot, 87],
+      'Bash' : [bash, 80]
     }
     const otherSkills = {
       'Git' : [git, 90],
       'Agile' : [agile, 100],
-      'Salesforce' : [salesforce, 85],
-      'DNS' : [dns, 85],
+      'Salesforce' : [salesforce, 86],
+      'DNS' : [dns, 81],
       'Final Cut Pro' : [fcp, 80]
     }
 

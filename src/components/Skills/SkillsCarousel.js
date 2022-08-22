@@ -45,7 +45,7 @@ export const SkillsCarousel = (props) => {
                             <div className="pt-4"> 
                                 {skill}
                                 <span className='custom-br-title'></span>
-                                <Rating className='custom-star-rating' size={20} ratingValue={props.skills[skill][1]} /* Star Rating */ />
+                                <Rating readonly={true} className='custom-star-rating' size={20} ratingValue={props.skills[skill][1]} /* Star Rating */ />
                             </div>
                         </div>
                      </div>
