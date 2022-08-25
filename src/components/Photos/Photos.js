@@ -44,7 +44,7 @@ export const Photos = () => {
                     <h1 id="photos-title" className='text-center'> Take a glance at a snapshot of my life </h1>
                     <img className="photos-smiley-icon mb-3 ms-3" src={Smile} alt="Smile"/>
                     <div className='w-100'> </div>
-                    <h5> Scroll to the bottom of the page to view more pics </h5>
+                    <h5 style={{opacity: 0.7}}> Scroll to the bottom of the page to view more photos </h5>
                 </div>
             </div>
             <div className='row py-5'>
