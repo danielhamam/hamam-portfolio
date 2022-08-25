@@ -23,7 +23,11 @@
 }
 
 .photo-enter {
-    animation: photo-transition 3s;
+    animation: photo-transition 5s;
+ }
+
+ .photos-scrolling-text {
+    font-size: 14pt;
  }
 
 @keyframes photo-transition{

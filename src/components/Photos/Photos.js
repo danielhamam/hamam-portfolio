@@ -3,10 +3,11 @@ import Smile from '../../assets/photo-album/Smile.png';
 import './Photos.css';
 
 const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 4
+const NUMBER_PHOTOS_TO_START_WITH = 16
 
 export const Photos = () => {
     const [photos, setPhotos] = useState(null);
-    const [numPhotos, setNumPhotos] = useState(8);
+    const [numPhotos, setNumPhotos] = useState(NUMBER_PHOTOS_TO_START_WITH);
     const [showLoadingPhotos, setShowLoadingPhotos] = useState(false)
 
     function importPhotoAlbum(source) {
@@ -38,9 +39,13 @@ export const Photos = () => {
 
     return (
         <div id='photos-container' className='container'>
-            <div className='d-flex justify-content-center align-items-center py-5 my-5'>
-                <h1 id="photos-title" className='text-center'> Take a glance at a snapshot of my life </h1>
-                <img className="photos-smiley-icon mb-3 ms-3" src={Smile} alt="Smile"/>
+            <div>
+                <div className='d-flex justify-content-center align-items-center pt-5 my-5' style={{flexWrap: 'wrap'}}> 
+                    <h1 id="photos-title" className='text-center'> Take a glance at a snapshot of my life </h1>
+                    <img className="photos-smiley-icon mb-3 ms-3" src={Smile} alt="Smile"/>
+                    <div className='w-100'> </div>
+                    <h5> Scroll to the bottom of the page to view more pics </h5>
+                </div>
             </div>
             <div className='row py-5'>
                 {/* Dynamically Loading Images From Photos State */}
