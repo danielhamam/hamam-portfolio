@@ -1,41 +1,57 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Smile from '../../assets/photo-album/Smile.png';
 import './Photos.css';
 
 const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 4
-const NUMBER_PHOTOS_TO_START_WITH = 16
+const NUMBER_PHOTOS_TO_START_WITH = 8
 
 export const Photos = () => {
     const [photos, setPhotos] = useState(null);
     const [numPhotos, setNumPhotos] = useState(NUMBER_PHOTOS_TO_START_WITH);
-    const [showLoadingPhotos, setShowLoadingPhotos] = useState(false)
+    // const [showLoadingPhotos, setShowLoadingPhotos] = useState(false);
+    const lastImageObserver = useRef(null);
 
     function importPhotoAlbum(source) {
         // Fetch photos, randomly sort them, place into map
         return source.keys().sort(function(a,b) { return Math.random() - 0.5;}).map(source);
     }
 
+    function loadImages() {
+        // Add more photos to show in the photo album
+        if (photos && numPhotos < Object.keys(photos).length) {
+            let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
+            console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
+            setNumPhotos(amountPhotosAfterLoad);
+        }
+    }
+
     useEffect(() => {
         // Receive photos and set it as state so it renders
         if (!photos) { setPhotos(importPhotoAlbum(require.context('../../assets/photo-album/photos', false, /\.(png|jpe?g|svg)$/))); }
 
-        // Check if user reached bottom of page
-        const loadImages = () => {
-            if ((window.innerHeight + Math.ceil(window.pageYOffset + 1)) >= document.body.offsetHeight) {
-                if (photos && numPhotos < Object.keys(photos).length) {
-                    let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
-                    console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
-                    setShowLoadingPhotos(true)
-                    setNumPhotos(amountPhotosAfterLoad);
-                    setShowLoadingPhotos(false)
-                }
-            }
-        }
-        window.addEventListener('scroll', loadImages);
+        if (document.querySelector(".photo-item:last-child")) {
 
-        // Imitating componentWillUnmount
-        return () => { window.removeEventListener('scroll', loadImages); }
-    }, [photos, numPhotos]) // Triggers the useEffect function to run when photos or numPhotos state changes
+            // Observe last image and if intersecting add more numphotos
+            lastImageObserver.current = new IntersectionObserver(
+                entries => {
+                    const lastImage = entries[0]; // only watching one image, so can access first entry.
+                    if (!lastImage.intersectionRatio) return; // if it's not intersecting, just return
+                    // once our last image starts to be visible, then load in a bunch of new images
+                    loadImages();
+                    lastImageObserver.current.unobserve(lastImage.target); // don't want to observe old image anymore
+                    // lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child")); // get new last card and observe
+                },
+                {
+                    threshold: 1,
+                    rootMargin : "1px", // Option - runs when element is 100px away from becoming on the screen
+                }
+            )
+
+            // Watch the last image in the image list
+            lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child"));
+        }
+
+    }, [photos, numPhotos]) // Triggers the useEffect function to run when photos state changes
 
     return (
         <div id='photos-container' className='container'>
@@ -57,9 +73,6 @@ export const Photos = () => {
                             </div>
                         )})) : 'Loading photos...'
                 }
-
-                {/* Check if More Photos are Loading */}
-                { showLoadingPhotos === true ? <div className='text-center mt-5' style={{fontWeight: 800}}> <span> Loading more photos...</span> </div> : ''}
 
             </div>
         </div>

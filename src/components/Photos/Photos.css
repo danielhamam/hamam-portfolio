@@ -23,7 +23,7 @@
 }
 
 .photo-enter {
-    animation: photo-transition 5s;
+    animation: photo-transition 7s;
  }
 
  .photos-scrolling-text {
