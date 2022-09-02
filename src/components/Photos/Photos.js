@@ -16,26 +16,17 @@ export const Photos = () => {
         return source.keys().sort(function(a,b) { return Math.random() - 0.5;}).map(source);
     }
 
-    function loadImages() {
-        // Add more photos to show in the photo album
-        if (photos && numPhotos < Object.keys(photos).length) {
-            let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
-            console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
-            setNumPhotos(amountPhotosAfterLoad);
-        }
-    }
-
     useEffect(() => {
         // Receive photos and set it as state so it renders
         if (!photos) { setPhotos(importPhotoAlbum(require.context('../../assets/photo-album/photos', false, /\.(png|jpe?g|svg)$/))); }
 
-        if (document.querySelector(".photo-item:last-child")) {
+        if (document.querySelector(".photo-item-wrapper:last-child")) {
 
             // Observe last image and if intersecting add more numphotos
             lastImageObserver.current = new IntersectionObserver(
                 entries => {
                     const lastImage = entries[0]; // only watching one image, so can access first entry.
-                    if (!lastImage.intersectionRatio) return; // if it's not intersecting, just return
+                    if (!lastImage.isIntersecting) return; // if it's not intersecting, just return
                     // once our last image starts to be visible, then load in a bunch of new images
                     loadImages();
                     lastImageObserver.current.unobserve(lastImage.target); // don't want to observe old image anymore
@@ -43,15 +34,24 @@ export const Photos = () => {
                 },
                 {
                     threshold: 1,
-                    rootMargin : "1px", // Option - runs when element is 100px away from becoming on the screen
+                    rootMargin : "1px", // Option - runs when element is 1px away from becoming on the screen
                 }
             )
 
-            // Watch the last image in the image list
+            // Watch the last image in the image list (runs after loading more photos or loading photos the first time)
             lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child"));
         }
 
-    }, [photos, numPhotos]) // Triggers the useEffect function to run when photos state changes
+        const loadImages = () => {
+            // Add more photos to show in the photo album
+            if (photos && numPhotos < Object.keys(photos).length) {
+                let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
+                console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
+                setNumPhotos(amountPhotosAfterLoad);
+            }
+        }
+
+    }, [photos, numPhotos]) // Triggers the useEffect function to run when photos / numPhotos state changes
 
     return (
         <div id='photos-container' className='container'>
