@@ -12,7 +12,6 @@
 
 .photo-item {
     width: 230px;
-    min-height: 120px;
 }
 
 .photo-item-wrapper {
@@ -21,6 +20,8 @@
     align-items: center;
     justify-content: center;
     padding-top: 1.5rem;
+    height: 500px;
+    width: 500px;
 }
 
 .photo-enter {
