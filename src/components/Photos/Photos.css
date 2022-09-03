@@ -12,6 +12,7 @@
 
 .photo-item {
     width: 230px;
+    min-height: 120px;
 }
 
 .photo-item-wrapper {
