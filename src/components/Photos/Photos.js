@@ -11,6 +11,7 @@ export const Photos = () => {
     const [numPhotos, setNumPhotos] = useState([NUMBER_PHOTOS_TO_START_WITH, NUMBER_PHOTOS_TO_START_WITH + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL]); // prevValue, newValue
     const lastImageObserver = useRef(null);
     const [imageModal, setImageModal] = useState(null);
+    // const [showModal, setShowModal] = useState(null);
 
     function importPhotoAlbum(source) {
         // Fetch photos, randomly sort them, place into map
@@ -22,7 +23,7 @@ export const Photos = () => {
         console.log("Opening Image Zoom Modal...")
         var imageModal = new Modal(document.getElementById("imageModal"), {});
         setImageModal(e.target.src);
-        imageModal.show();
+        imageModal.toggle();
     }
 
     useEffect(() => {
@@ -46,7 +47,10 @@ export const Photos = () => {
                     setNumPhotos((numPhotos) => [numPhotos[1], (numPhotos[1] + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL) <= Object.keys(photos.current).length ? (numPhotos[1] + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL) : Object.keys(photos.current).length]);
                 }
             },
-            { threshold: 1, }
+            { 
+                threshold: 1,
+                // rootMargin: "-10px"
+            }
         )
         console.log('useEffect: INSERT Last image observation set to: ', document.querySelector(".photo-item-wrapper:last-child"))
         lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child")); // get new last image and observe
@@ -97,14 +101,19 @@ export const Photos = () => {
     }, [numPhotos])
 
     return (
+
         <div id='photos-container' className='container'>
 
             {/* Image Modal */}
             <div id="imageModal" className="modal" tabIndex="-1">
-                <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-dialog modal-dialog-centered modal-xs modal-sm modal-md modal-lg">
                     <div className="modal-content">
-                        <div className="modal-body" style={{backgroundColor: 'transparent !important'}}>
-                            <img src={imageModal ? imageModal : ''} width={'100%'} alt="modal-snap"></img>
+                        <div className="modal-body">
+                            {/* <div className='container'> */}
+                                <div> 
+                                    <img src={imageModal ? imageModal : ''} width={'100%'} alt="modal-snap"></img>
+                                </div> 
+                            {/* </div> */}
                         </div>
                     </div>
                 </div>

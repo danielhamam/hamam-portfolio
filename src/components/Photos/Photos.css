@@ -13,6 +13,7 @@
 .photo-item {
     width: 230px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .photo-item-wrapper {
@@ -25,16 +26,21 @@
 }
 
 .photo-enter {
-    animation: photo-transition 8s;
+    animation: photo-transition 10s;
  }
 
  .photos-scrolling-text {
     font-size: 14pt;
  }
 
+
+ .photo-item:hover {
+    opacity: 0.7;
+}
+
 @keyframes photo-transition{
     from {
-        opacity: 0.2;
+        opacity: 0.1;
     }
     to {
         opacity: 1;
@@ -49,3 +55,11 @@
         height: 330px;
     }
 }
+
+@media(max-width: 575px) {
+    .modal .modal-xs {
+        width: 250px;
+        margin: auto;
+    }
+} 
+
