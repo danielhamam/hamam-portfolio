@@ -6,10 +6,10 @@ const NUMBER_PHOTOS_TO_LOAD_PER_SCROLL = 4
 const NUMBER_PHOTOS_TO_START_WITH = 8
 
 export const Photos = () => {
-    const [photos, setPhotos] = useState(null);
-    const [numPhotos, setNumPhotos] = useState(NUMBER_PHOTOS_TO_START_WITH);
-    // const [showLoadingPhotos, setShowLoadingPhotos] = useState(false);
+    const photos = useRef(importPhotoAlbum(require.context('../../assets/photo-album/photos', false, /\.(png|jpe?g|svg)$/)));
+    const [numPhotos, setNumPhotos] = useState([NUMBER_PHOTOS_TO_START_WITH, NUMBER_PHOTOS_TO_START_WITH + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL]); // prevValue, newValue
     const lastImageObserver = useRef(null);
+    const isFirstRender = useRef(false);
 
     function importPhotoAlbum(source) {
         // Fetch photos, randomly sort them, place into map
@@ -17,41 +17,79 @@ export const Photos = () => {
     }
 
     useEffect(() => {
-        // Receive photos and set it as state so it renders
-        if (!photos) { setPhotos(importPhotoAlbum(require.context('../../assets/photo-album/photos', false, /\.(png|jpe?g|svg)$/))); }
-
-        if (document.querySelector(".photo-item-wrapper:last-child")) {
-
-            // Observe last image and if intersecting add more numphotos
-            lastImageObserver.current = new IntersectionObserver(
-                entries => {
-                    const lastImage = entries[0]; // only watching one image, so can access first entry.
-                    if (!lastImage.isIntersecting) return; // if it's not intersecting, just return
-                    // once our last image starts to be visible, then load in a bunch of new images
-                    loadImages();
-                    lastImageObserver.current.unobserve(lastImage.target); // don't want to observe old image anymore
-                    // lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child")); // get new last card and observe
-                },
+        console.log("useEffect START: ",  new Date().toISOString());
+        // Observe last image and if intersecting add more numphotos
+        lastImageObserver.current = new IntersectionObserver 
+        (
+            function(entries, self) 
+            {
+                const lastImage = entries[0]; // only watching one image, so can access first entry.
+                if (!lastImage.isIntersecting) 
                 {
-                    threshold: 1,
-                    rootMargin : "1px", // Option - runs when element is 1px away from becoming on the screen
+                    console.log("useEffect: Last image IS NOT intersecting...returning")
+                    return; // If it's not intersecting, just return
                 }
-            )
+                else if (lastImage.isIntersecting) 
+                {
+                    console.log("useEffect: Last image IS intersecting...proceeding")
+                    console.log('useEffect: DELETE Last image observation set to: ', lastImage.target)
+                    self.unobserve(lastImage.target); // Get old last image and unobserve
+                    setNumPhotos((numPhotos) => [numPhotos[1], (numPhotos[1] + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL) <= Object.keys(photos.current).length ? (numPhotos[1] + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL) : Object.keys(photos.current).length]);
+                }
+            },
+            { threshold: 1, }
+        )
+        console.log('useEffect: INSERT Last image observation set to: ', document.querySelector(".photo-item-wrapper:last-child"))
+        lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child")); // get new last image and observe
+        console.log("useEffect END: ",  new Date().toISOString());
+    }, []) // Triggers the useEffect function to run when photos / numPhotos state changes
 
-            // Watch the last image in the image list (runs after loading more photos or loading photos the first time)
-            lastImageObserver.current.observe(document.querySelector(".photo-item-wrapper:last-child"));
+
+    // Will re-activate every time numPhotos changes
+    useEffect(() => {
+        if (!isFirstRender.current) {
+            isFirstRender.current = true;
         }
-
-        const loadImages = () => {
+        else {
+            console.log('(2) useEffect - numPhotos trigger activated');
             // Add more photos to show in the photo album
-            if (photos && numPhotos < Object.keys(photos).length) {
-                let amountPhotosAfterLoad = numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL <= Object.keys(photos).length ? numPhotos + NUMBER_PHOTOS_TO_LOAD_PER_SCROLL : Object.keys(photos).length;
-                console.log('Loading more photos into album: ' + (amountPhotosAfterLoad) + '/' +  Object.keys(photos).length)
-                setNumPhotos(amountPhotosAfterLoad);
+            if (photos.current && numPhotos[0] < Object.keys(photos.current).length) 
+            {
+                console.log('(2) useEffect: Loading more photos into album: ' + (numPhotos[1]) + '/' +  Object.keys(photos.current).length)
+                console.log('(2) Loading indexes', numPhotos[0], ' to ', numPhotos[1] - 1)
+                for (let i = numPhotos[0]; i <= numPhotos[1] - 1; i++) 
+                {
+                    // Fetch parent container
+                    const photosContainer = document.getElementById("photo-items-container");
+
+                    // Create element
+                    const imageDiv = document.createElement('div');
+                    imageDiv.classList.add('col');
+                    imageDiv.classList.add('col-sm-6')
+                    imageDiv.classList.add('col-lg-3')
+                    imageDiv.classList.add('photo-item-wrapper')
+                    imageDiv.classList.add('photo-enter')
+                    const imageContent = document.createElement('img');
+                    imageContent.classList.add('photo-item');
+                    imageContent.src=photos.current[i];
+                    imageContent.key={i};
+                    imageDiv.append(imageContent);
+
+                    // Append to parent container
+                    photosContainer.append(imageDiv);
+
+                    console.log("(2) useEffect: Added a photo to photo album");
+
+                    // if last image being added, observe
+                    if (i == numPhotos[1] - 1) 
+                    {
+                        console.log('(2) useEffect: INSERT Last image observation set to: ', imageDiv)
+                        lastImageObserver.current.observe(imageDiv);
+                    }                    
+                }
             }
         }
-
-    }, [photos, numPhotos]) // Triggers the useEffect function to run when photos / numPhotos state changes
+    }, [numPhotos])
 
     return (
         <div id='photos-container' className='container'>
@@ -63,17 +101,16 @@ export const Photos = () => {
                     <h5 style={{opacity: 0.7}}> Scroll to the bottom of the page to view more photos </h5>
                 </div>
             </div>
-            <div className='row py-5'>
+            <div id="photo-items-container" className='row py-5'>
                 {/* Dynamically Loading Images From Photos State */}
                 {
-                    photos != null ? (photos.filter(function (image,index) { return index < numPhotos }).map((image, index) => {
+                    photos.current != null ? (photos.current.filter(function (image,index) { return index < NUMBER_PHOTOS_TO_START_WITH }).map((image, index) => {
                         return (
                             <div className='col col-sm-6 col-lg-3 photo-item-wrapper photo-enter' key={index} >
                                 <img className='photo-item' key={index} src={image} alt="life-snap"/>
                             </div>
                         )})) : 'Loading photos...'
                 }
-
             </div>
         </div>
     )
