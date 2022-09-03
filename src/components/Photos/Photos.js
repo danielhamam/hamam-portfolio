@@ -104,7 +104,7 @@ export const Photos = () => {
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-body" style={{backgroundColor: 'transparent !important'}}>
-                            <img src={imageModal ? imageModal : ''} width={'100%'}></img>
+                            <img src={imageModal ? imageModal : ''} width={'100%'} alt="modal-snap"></img>
                         </div>
                     </div>
                 </div>
