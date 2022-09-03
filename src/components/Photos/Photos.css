@@ -12,6 +12,7 @@
 
 .photo-item {
     width: 230px;
+    cursor: pointer;
 }
 
 .photo-item-wrapper {
@@ -20,8 +21,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 1.5rem;
-    height: 500px;
-    width: 500px;
+    height: 490px;
 }
 
 .photo-enter {
@@ -44,5 +44,8 @@
 @media(max-width: 481px ) {
     .photo-item {
         width: 150px;
+    }
+    .photo-item-wrapper {
+        height: 330px;
     }
 }
