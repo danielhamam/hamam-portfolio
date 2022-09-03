@@ -81,7 +81,7 @@ export const Photos = () => {
                     console.log("(2) useEffect: Added a photo to photo album");
 
                     // if last image being added, observe
-                    if (i == numPhotos[1] - 1) 
+                    if (i === numPhotos[1] - 1) 
                     {
                         console.log('(2) useEffect: INSERT Last image observation set to: ', imageDiv)
                         lastImageObserver.current.observe(imageDiv);
