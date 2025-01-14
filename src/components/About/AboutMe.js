@@ -6,10 +6,13 @@ import './AboutMe.css';
 export default function AboutMe() {
   return (
     <div className='d-flex flex-column justify-content-center align-items-center'>
-        <div className='about-spacing'> 
-            <img id="about-portrait" src={portrait} alt="About Portrait"/>
-        </div>
-        <div className='about-spacing'> 
+            <img 
+            src={portrait} 
+            alt="About Portrait"
+            style={{ width: '350px' }}
+            className="m-5 p-2 rounded-circle"
+            />
+        <div className='mt-1 mb-5'> 
             <div id="about-header">
                 Hello, World!
             </div>
@@ -17,7 +20,7 @@ export default function AboutMe() {
         <div className='about-text-container about-spacing'>
             <div id='about-text'> 
                 {/* Set 1 */}
-                <p> Most people call me Danny or Hamam. </p> 
+                <p> Most people call me Danny, or just "Hamam". </p> 
                 <p> I was raised 50 minutes north of Manhattan in a city named <i>Yonkers</i>. </p>
                 <p> In many ways I consider myself a “90s” kid: the typical day-to-day grind of blowing into my Nintendo 64 when a game stopped working and gossiping 
                     on AOL messenger using my dad’s old big computer. But what really attracted me was when I secured my first computer. Granted, it was my mother’s old 
@@ -45,12 +48,11 @@ export default function AboutMe() {
                 <p> With all achievements aside, the tradeoff between making others happy and being my authentic self was clear to me. That's when my journey started. </p>
                 {/* Set 6 */}
                 <p> A dream of mine is to collaborate with this generation's pioneers in pursuit of chasing after a greater purpose. Leaving an impact and revolutionizing the industry has always pushed me to achieve 
-                    perfection. My objective is to work with a team to maintain a revenue-generating project that has groundbreaking potential. I take pride in building team-based relationships with other developers and discussing how to maximize our work's potential. </p>
-                <p> I want to work with a team I love to build a brand I love.</p>
-                <p> - Hamam </p>
+                    perfection. My objective is to work with a team to build an exciting project that has groundbreaking potential. I take pride in building team-based relationships with other developers and discussing how to maximize our work's potential. </p>
+                <p className="fw-bolder" > I want to work with a team I love to build a brand I love.</p>
             </div>
         </div>
-        <div style={{width: '30%', marginTop: '1.5rem'}} className='text-center'>
+        <div style={{width: '30%', marginTop: '1.5rem'}} className='text-center p-5'>
             <img id='about-resume-icon' src={resume} alt="About Resume Icon"/>
             <p id='about-resume-text' className='text-center'> <a target="_blank" rel="noopener noreferrer" href="hamam-resume.pdf"> Hamam's Resume </a> </p>
         </div>

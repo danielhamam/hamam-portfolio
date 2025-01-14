@@ -1,15 +1,6 @@
 
 /* About Me Styling */
 
-#about-portrait {
-    height: 25rem;
-    width: 38rem;
-}
-
-.about-spacing {
-    margin-top: 3rem
-}
-
 #about-header {
     font-size: 3rem;
     font-weight: 800;
