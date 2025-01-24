@@ -18,8 +18,6 @@ export default function SkillsIntro() {
                     <span id='skills-desc'> 
                         I program in all different <br/> kinds of ways. Catch me on all <br/> sides of the stack! 
                     </span>
-                    <span className='custom-br-position'></span>
-                    <button id='skills-button' onClick={() => {document.getElementById('skills-container').scrollIntoView()}} > SCROLL DOWN </button>
                 </div>
             </div>
             <div className='col-5 col-xxl-5 ps-2 pt-3 d-flex align-items-center'>

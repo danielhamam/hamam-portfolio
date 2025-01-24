@@ -1,0 +1,40 @@
+/* About Me Styling */
+
+#about-header {
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+#about-text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #000000;
+    opacity: 0.6;
+    line-height: 3rem;
+}
+
+.about-text-container {
+    width: 80%; 
+}
+
+#about-resume-icon {
+    height: 7rem;
+    width: 7rem;
+    transition: transform 0.3s ease;
+}
+
+#about-resume-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}

@@ -8,9 +8,7 @@ export const PhotoAlbum = (props) => {
   return (
     <>
       <GlobalNavbar active={props.active}/>
-      <AnimatedPage>
         <Photos/>
-      </AnimatedPage>
       <Footer/>
     </>
   )

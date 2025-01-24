@@ -1,4 +1,3 @@
-
 /* About Me Styling */
 
 #about-header {
@@ -7,7 +6,7 @@
     opacity: 0.9;
 }
 
-#about-text {
+.about-text {
     font-family: 'Inter';
     font-weight: 400;
     font-size: 1.7rem;
@@ -21,11 +20,24 @@
 }
 
 #about-resume-icon {
-    margin-top: -2rem;
-    height: 9rem;
-    width: 9rem;
+    height: 7rem;
+    width: 7rem;
+    transition: transform 0.3s ease;
 }
 
-#about-resume-text {
-    font-size: 1.3rem;
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.custom-gradient {
+    background: linear-gradient(to right, #4a90e2, #357abd);
+}
+
+.custom-gradient:hover {
+    background: linear-gradient(to right, #6ba5e8, #4b8fd3) !important;
 }

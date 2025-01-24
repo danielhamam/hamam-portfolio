@@ -8,9 +8,7 @@ export const Portfolio = (props) => {
   return (
     <>
       <GlobalNavbar active={props.active} />
-      <AnimatedPage>
         <ProjectContainer />
-      </AnimatedPage>
       <Footer />
     </>
   );

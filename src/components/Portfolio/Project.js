@@ -13,7 +13,7 @@ export const Project = (props) => {
         {/* Project */}
         <img className="proj-image" src={props.image} alt="Project" />
         <div className='proj-selection'></div>
-        <FontAwesomeIcon data-bs-toggle="modal" data-bs-target="#project-modal" className='proj-icon1' icon={solid('eye')} onClick={() => props.setModalContents(props.image, props.modalContent[0], props.modalContent[1])} />
+        <FontAwesomeIcon data-bs-toggle="modal" data-bs-target="#project-modal" className='proj-icon1' icon={solid('eye')} onClick={() => props.setModalContents(props.image, props.modalContent[0], props.modalContent[1], props.skills)} />
         <FontAwesomeIcon className='proj-icon2' icon={solid('arrow-up-right-from-square')} onClick={() =>  window.open(props.link)}/>
 
     </div>
