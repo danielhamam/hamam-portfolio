@@ -1,7 +1,6 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import codingGif from "../../assets/homepage/coding-gif.gif";
-import { Mail } from "lucide-react";
 
 export default function Introduction() {
   return (

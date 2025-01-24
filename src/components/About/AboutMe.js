@@ -1,6 +1,5 @@
 import React from "react";
 import portrait from "../../assets/about-me/about-header.png";
-import resume from "../../assets/about-me/about-resume-icon.png";
 import "./AboutMe.css";
 
 export default function AboutMe() {
