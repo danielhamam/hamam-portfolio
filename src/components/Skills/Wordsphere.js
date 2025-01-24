@@ -11,11 +11,16 @@ export function createWordSphere(tagCloud, width) {
   const TagCloud = require('TagCloud');
 
   const myTags = [
-    'JavaScript', 'CSS', 'HTML',
-    'Python', 'Java', 'ReactJS', 'Python',
+    'React.js', 'Next.js', 'Angular.js',
+    'Tailwind', 'TypeScript', 'Redux',
+    'JavaScript', 'CSS', 'HTML', 'MongoDB',
+    'DynamoDB', 'Express.js', 'Supabase',
+    'Python', 'Java', 'ReactJS', 'Firebase',
     'Bash', 'Git', 'Flask', 'AngularJS', 
-    'MySQL','Spring Boot', 'JSON', 'NodeJS',
-    'Bootstrap', 'AWS', 'Salesforce', 'Agile'
+    'MySQL', 'Spring Boot', 'PostgreSQL', 'Node.js',
+    'Bootstrap', 'AWS', 'Salesforce', 'Agile',
+    'Jenkins', 'Docker', 'JFrog', 'BlazeMeter', 
+    'Kubernetes', 'Cypress', 'Figma'
   ];
 
   if (tagCloud != null) tagCloud.destroy()
