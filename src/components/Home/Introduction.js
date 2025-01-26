@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import codingGif from "../../assets/homepage/coding-gif.gif";
+import { Skeleton } from "@mui/material";
+import ImageSkeleton from "components/ImageSkeleton";
 
 export default function Introduction() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div
       id="intro-container"
@@ -25,7 +28,7 @@ export default function Introduction() {
                 ]}
                 speed={200}
                 typingDelay={300}
-            eraseDelay={1000}
+                eraseDelay={1000}
                 eraseSpeed={80}
               />
               <br />
@@ -34,12 +37,14 @@ export default function Introduction() {
           </div>
         </div>
         <div className="col-4">
-          {/* <iframe src="https://giphy.com/embed/ndIq5ohg1pyfqyVOII" id="intro-image" title="Coding Gif" frameBorder="0" clasNames="giphy-embed" ></iframe><a href="https://giphy.com/gifs/drummachinefunk-create-develop-developing-ndIq5ohg1pyfqyVOII"> </a> */}
+          {!imageLoaded && <ImageSkeleton width={310} height={300} />}
           <img
             src={codingGif}
-            id="intro-image"
+            className="intro-image"
+            style={{ display: imageLoaded ? "block" : "none" }}
             title="Coding Gif"
             alt="hamam-coding"
+            onLoad={() => setImageLoaded(true)}
           />
         </div>
       </div>

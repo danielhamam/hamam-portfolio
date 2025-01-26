@@ -50,7 +50,7 @@ export default function HomeNav() {
               <br />
               <span className="home-nav-font">
                 {" "}
-                Jog through a list of personal projects that I dedicate my time
+                Jog through a list of personal projects that I dedicate my spare time
                 building{" "}
               </span>
               <br />
@@ -65,7 +65,7 @@ export default function HomeNav() {
               <br />
               <span className="home-nav-font">
                 {" "}
-                Take a stroll through an album of pictures I took sometime
+                Take a stroll through random pictures I took sometime
                 during my life{" "}
               </span>
               <br />

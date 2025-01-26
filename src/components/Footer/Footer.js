@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 export default function Footer() {
   return (
     <div id="footer-wrapper">
-      <div className="d-flex flex-row justify-content-between w-100 px-5 py-4">
+      <div className="d-flex flex-row justify-content-between align-items-center w-100 px-5 py-4">
         <div className="footer-text-content">All Rights Reserved To Hamam</div>
         <div className="d-flex align-items-center gap-4">
           <button

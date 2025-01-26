@@ -12,6 +12,7 @@
     font-weight: 800;
     /* font-size: var(--fs-xl-name);  */
     font-size: 5rem;
+    white-space: nowrap;
 }
 
 #intro-position {
@@ -50,7 +51,7 @@
     margin-bottom: -.4em;
 }
 
-#intro-image {
+.intro-image {
     height: 35rem;
     /* width: 20rem; */
     max-width: 100%
