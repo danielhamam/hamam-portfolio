@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import portrait from "../../assets/about-me/about-header.png";
 import "./AboutMe.css";
 
 export default function AboutMe() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <img
-        src={portrait}
-        alt="About Portrait"
-        style={{ width: "750px" }}
-        className="m-3 p-2"
-      />
+      <div
+        style={{
+          width: "750px",
+          height: "400px",
+        }}
+      >
+        {/* Actual Image */}
+        <img
+          src={portrait}
+          alt="About Portrait"
+          style={{
+            width: "750px",
+            display: imageLoaded ? "block" : "none",
+            opacity: imageLoaded ? 1 : 0,
+          }}
+          className="ml-5"
+          onLoad={() => setImageLoaded(true)}
+        />
+      </div>
+
       <div className="mb-5">
         <div id="about-header">Hello, World!</div>
       </div>
@@ -119,23 +134,23 @@ export default function AboutMe() {
           </p>
         </div>
         <div className="d-flex align-items-center gap-2">
-            <p className="mb-0 about-text"> Curious about me? </p>
-            <p className="fw-bolder mb-0">
-              <a
-                href="hamam-resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-lg custom-gradient"
-                style={{
-                  border: "none",
-                  padding: "0.3rem 0.65rem",
-                  borderRadius: "50px",
-                }}
-              >
-                Resume
-              </a>
-            </p>
-          </div>
+          <p className="mb-0 about-text"> Curious about me? </p>
+          <p className="fw-bolder mb-0">
+            <a
+              href="hamam-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-lg custom-gradient"
+              style={{
+                border: "none",
+                padding: "0.3rem 0.65rem",
+                borderRadius: "50px",
+              }}
+            >
+              Resume
+            </a>
+          </p>
+        </div>
         <p className="mb-5"></p>
       </div>
     </div>

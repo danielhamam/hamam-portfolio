@@ -28,9 +28,6 @@ export const GlobalNavbar = (props) => {
             </li>
           </ul>
         </div>
-        {/* <span className="me-5 pe-4 nav-link">
-            <Toggle/>
-          </span> */}
       </div>
     </nav>
   )
