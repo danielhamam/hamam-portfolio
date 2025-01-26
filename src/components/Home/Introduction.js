@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import codingGif from "../../assets/homepage/coding-gif.gif";
-import { Skeleton } from "@mui/material";
 import ImageSkeleton from "components/ImageSkeleton";
 
 export default function Introduction() {
