@@ -17,6 +17,10 @@ This portfolio was created by Daniel Hamam. All rights are reserved and must be 
 (1) Run development server
     - npm start
 ```
+## Deployment
+```
+This codebase is currently deployed on Netlify. To trigger a deployment, push to the main branch.
+```
 ## Copyright License
 
 ```
